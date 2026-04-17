@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio de Santiago Ríos enfocado en análisis de datos, visualización, big data y data storytelling."
+    />
+    <meta
+      name="keywords"
+      content="portafolio, análisis de datos, visualización de datos, big data, data storytelling, dashboards, proyectos"
+    />
+    <meta name="author" content="Santiago Ríos" />
+
+    <title>Santiago Ríos B. | Portafolio de Ciencia de Datos</title>
+
+    <!-- Fuentes para usar desde style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JavaScript externo -->
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Acceso rápido -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="site-header" id="inicio">
+      <div class="container">
+        <div class="header-content">
+          <a href="#inicio" class="logo" aria-label="Ir al inicio">
+            <span class="logo-mark">SRB</span>
+            <span class="logo-text">Santiago Ríos Benjumea</span>
+          </a>
+
+          <nav class="main-nav" aria-label="Navegación principal">
+            <button
+              class="nav-toggle"
+              aria-label="Abrir menú de navegación"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+              type="button"
+            >
+              Menú
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+              <li><a href="#sobre-mi">Sobre mí</a></li>
+              <li><a href="#enfoque">Enfoque</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#proceso">Proceso</a></li>
+              <li><a href="#habilidades">Habilidades</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero section">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Análisis de datos · Visualización · Big Data</p>
+
+            <h1 class="hero-title">
+              Transformo los datos en narrativas que permiten comprender situaciones y tomar decisiones.
+            </h1>
+
+            <p class="hero-description">
+              Soy analista y visualizador de datos con enfoque en
+              hallazgos accionables y soluciones estratégicas.
+              En este portafolio presento algunos proyectos donde convierto datos e información
+              compleja en mensajes claros para apoyar decisiones.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#proyectos" class="button button-primary">Ver proyectos</a>
+              <a href="#contacto" class="button button-secondary">Contactarme</a>
+            </div>
+
+            <ul class="hero-highlights" aria-label="Aspectos destacados">
+              <li>Análisis exploratorio y descubrimiento de insights</li>
+              <li>Narrativa visual para facilitar y comunicar decisiones</li>
+              <li>Procesamiento y organización de datos a escala</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section class="about section" id="sobre-mi">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Sobre mí</p>
+            <h2 class="section-title">Comprensión, claridad y propósito</h2>
+          </div>
+
+          <div class="about-layout about-layout-profile">
+            <div class="about-text">
+              <p>
+                Soy Santiago Ríos Benjumea, un profesional orientado al análisis y la ciencia de datos, con experiencia en
+                la recolección, tratamiento, modelado y visualización de información para apoyar
+                la toma de decisiones estratégicas, la optimización de procesos y la generación
+                de conocimiento basado en datos.
+              </p>
+
+              <p>
+                Actualmente soy candidato al título del Máster Oficial en Análisis y Visualización de Big Data, y he
+                liderado proyectos donde el uso de Python, SQL, Power BI y técnicas de machine
+                learning ha sido clave para comprender fenómenos complejos y aportar valor en
+                distintos contextos.
+              </p>
+
+              <p>
+                Mi perfil combina competencias analíticas con una visión aplicada de la
+                tecnología para resolver problemas reales, especialmente en ámbitos relacionados
+                con la adminsitración académica, el consumo de alimentos y la sostenibilidad.
+                Además, mi formación interdisciplinar me ha permitido desarrollar una mirada
+                interdisciplinaria sobre los alimentos, el comportamiento humano y los contextos educativos.
+              </p>
+            </div>
+
+             <aside class="about-photo-card" aria-label="Fotografía de Santiago Ríos">
+              <div class="about-photo">
+                <img
+                  src="media/Santiago Rios B.png"
+                  alt="Fotografía profesional de Santiago Ríos"
+                  width="378"
+                  height="508"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+              
+              <div class="summary-card">
+                <div class="summary-card">
+                  <h3>Enfoque profesional</h3>
+                    <ul>
+                      <li>Análisis y ciencia de datos aplicada</li>
+                      <li>Narrativa visual para comunicar hallazgos</li>
+                      <li>Dashboards y visualización para toma de decisiones</li>
+                      <li>Interés en alimentos, sostenibilidad y educación</li>
+                    </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enfoque -->
+      <section class="approach section" id="enfoque">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Enfoque</p>
+            <h2 class="section-title">Cómo abordo los proyectos de datos</h2>
+            <p class="section-description">
+              Mi propuesta combina lectura analítica, diseño de visualización y
+              construcción de narrativas para que los datos no sólo sean legibles,
+              sino que expliquen algo importante.
+            </p>
+          </div>
+
+          <div class="approach-grid">
+            <article class="approach-card">
+              <h3>Análisis con contexto</h3>
+              <p>
+                Cada proyecto parte de una pregunta clara. El análisis busca revelar
+                patrones, relaciones y oportunidades, no sólo describir datos.
+              </p>
+            </article>
+
+            <article class="approach-card">
+              <h3>Visualización con intención</h3>
+              <p>
+                Las visualizaciones deben facilitar comprensión. Priorizo claridad,
+                jerarquía visual y mensajes directos antes que complejidad innecesaria.
+              </p>
+            </article>
+
+            <article class="approach-card">
+              <h3>Narrativa estratégica</h3>
+              <p>
+                Un buen proyecto de datos no termina en un dashboard. Termina cuando
+                el hallazgo se convierte en una decisión, una recomendación o una nueva
+                forma de entender el problema.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preguntas que me interesa responder -->
+      <section class="questions section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Preguntas de valor</p>
+            <h2 class="section-title">Problemas que me interesa resolver con datos</h2>
+          </div>
+
+          <div class="questions-grid">
+            <article class="question-card">
+              <h3>Comportamiento</h3>
+              <p>
+                ¿Qué patrones explican cambios en usuarios, clientes o procesos?
+              </p>
+            </article>
+
+            <article class="question-card">
+              <h3>Desempeño</h3>
+              <p>
+                ¿Qué indicadores muestran oportunidades de mejora o riesgo?
+              </p>
+            </article>
+
+            <article class="question-card">
+              <h3>Segmentación</h3>
+              <p>
+                ¿Qué grupos o perfiles se comportan de forma distinta y por qué?
+              </p>
+            </article>
+
+            <article class="question-card">
+              <h3>Escalabilidad</h3>
+              <p>
+                ¿Cómo organizar y procesar grandes volúmenes de información para extraer valor?
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section class="projects section" id="proyectos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Proyectos</p>
+            <h2 class="section-title">Dashboards y casos de estudio destacados</h2>
+            <p class="section-description">
+              Estos proyectos muestran el resultado de visualizaciones con contexto,
+              hallazgos claros y utilidad para la toma de decisiones.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="media/Captura de pantalla 2026-04-15 145048.png"
+                  alt="Dashboard de Airbnb en Madrid con mapa de densidad, precios, reseñas y distribución por distritos"
+                  loading="lazy"
+                  decoding="async"
+                />
+            </div>
+
+            <div class="project-content">
+              <p class="project-category">Visualización · Mercado inmobiliario</p>
+              <h3 class="project-title">
+                Airbnb en Madrid: oferta, precios y demanda por zonas
+              </h3>
+              <p class="project-description">
+                Dashboard orientado a explorar la distribución de anuncios de Airbnb en Madrid,
+                identificar zonas con mayor concentración de oferta y analizar la relación entre
+                precio, disponibilidad y demanda aparente a partir de reseñas.
+              </p>
+
+              <div class="project-details">
+                <div>
+                  <h4>Objetivo</h4>
+                  <p>
+                    Comparar barrios y distritos para entender patrones territoriales en la oferta
+                    de alojamientos y su comportamiento en precio y ocupación.
+                  </p>
+                </div>
+
+                <div>
+                  <h4>Valor generado</h4>
+                  <p>
+                    Permite detectar zonas de alta actividad, diferencias por tipo de habitación
+                    y posibles oportunidades de análisis para turismo urbano y alojamiento temporal.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="project-tags" aria-label="Herramientas del proyecto">
+                <li>Tableau</li>
+                <li>Geovisualización</li>
+                <li>Storytelling</li>
+              </ul>
+                
+            </div>
+          </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="media/Captura de pantalla 2026-04-15 144657.png"
+                  alt="Dashboard de producción textil con métricas de calidad, defectos y pruebas de laboratorio"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="project-content">
+                <p class="project-category">Business Intelligence · Calidad industrial</p>
+                <h3 class="project-title">
+                  Control de calidad textil: producción, defectos y laboratorio
+                </h3>
+                <p class="project-description">
+                  Dashboard diseñado para monitorear indicadores de producción textil, metros
+                  clasificados, porcentaje de no calidad, defectos principales y resultados de
+                  laboratorio por lote, color y área.
+                </p>
+
+                <div class="project-details">
+                  <div>
+                    <h4>Objetivo</h4>
+                    <p>
+                      Integrar en una sola vista los principales indicadores de producción y calidad
+                      para facilitar el seguimiento operativo, detectar defectos recurrentes y
+                      comparar resultados entre procesos, lotes y áreas.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4>Valor generado</h4>
+                    <p>
+                      Permite identificar puntos críticos en la calidad textil, priorizar acciones
+                      correctivas y mejorar la lectura de desempeño mediante métricas claras y
+                      visualizaciones orientadas a la toma de decisiones.
+                    </p>
+                  </div>
+                </div>
+
+                <ul class="project-tags">
+                  <li>Power BI</li>
+                  <li>KPIs</li>
+                  <li>Calidad</li>
+                </ul>
+              </div>
+            </article>
+              
+        <article class="project-card">
+          <div class="project-image">
+            <img
+              src="media/Captura de pantalla 2026-04-15 143950.png"
+              alt="Dashboard sobre perfil nutricional y asequibilidad alimentaria en países de la Unión Europea"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="project-category">Análisis aplicado · Alimentación y sostenibilidad</p>
+            <h3 class="project-title">
+              Perfil nutricional y asequibilidad alimentaria en la Unión Europea
+            </h3>
+            <p class="project-description">
+              Visualización comparativa por país que integra indicadores de perfil nutricional,
+              costo de dieta saludable, capacidad de acceso y peso del gasto en alimentación,
+              con enfoque territorial y lectura longitudinal.
+            </p>
+
+            <div class="project-details">
+              <div>
+                <h4>Objetivo</h4>
+                <p>
+                  Comparar países de la Unión Europea para analizar la relación entre calidad
+                  nutricional, costo de una dieta saludable y condiciones de acceso alimentario
+                  en distintos contextos territoriales y temporales.
+                </p>
+              </div>
+
+              <div>
+                <h4>Valor generado</h4>
+                <p>
+                  Facilita una lectura comparativa de desigualdades alimentarias, permite detectar
+                  patrones entre nutrición y asequibilidad y aporta evidencia útil para reflexión,
+                  investigación y análisis de políticas públicas.
+                </p>
+              </div>
+            </div>
+
+            <ul class="project-tags">
+              <li>Power BI</li>
+              <li>Datos territoriales</li>
+              <li>Nutrición</li>
+            </ul>
+          </div>
+        </article>
+              
+        </div>
+        </div>
+      </section>
+
+      <!-- Proceso -->
+      <section class="process section" id="proceso">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Proceso</p>
+            <h2 class="section-title">Mi forma de convertir datos en historias</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <span class="step-number">01</span>
+              <h3>Definir la pregunta</h3>
+              <p>
+                Empiezo entendiendo el contexto, definiendo el objetivo y la decisión que se quiere apoyar.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span class="step-number">02</span>
+              <h3>Preparar y explorar</h3>
+              <p>
+                Organizo fuentes, limpio datos y realizo análisis exploratorio para identificar señales.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span class="step-number">03</span>
+              <h3>Encontrar el insight</h3>
+              <p>
+                Busco patrones y relaciones que respondan la pregunta original o abran nuevas hipótesis.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span class="step-number">04</span>
+              <h3>Diseñar la historia visual</h3>
+              <p>
+                Selecciono la mejor forma de comunicar el hallazgo con claridad, jerarquía y foco.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span class="step-number">05</span>
+              <h3>Traducir en acción</h3>
+              <p>
+                Presento conclusiones y recomendaciones para facilitar comprensión y decisión.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section class="skills section" id="habilidades">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Habilidades</p>
+            <h2 class="section-title">Herramientas y capacidades</h2>
+            <p class="section-description">
+              Organizo mis habilidades en bloques que representan cómo abordo un proyecto
+              completo, desde la preparación del dato hasta la comunicación del hallazgo.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-group">
+              <h3>Análisis de datos</h3>
+              <ul>
+                <li>Exploración y limpieza de datos</li>
+                <li>Análisis descriptivo e inferencial</li>
+                <li>Segmentación y comparación de grupos</li>
+                <li>Definición y seguimiento de KPIs</li>
+              </ul>
+            </article>
+
+            <article class="skill-group">
+              <h3>Visualización y comunicación</h3>
+              <ul>
+                <li>Dashboards ejecutivos y operativos</li>
+                <li>Storytelling con datos</li>
+                <li>Diseño de visualizaciones claras</li>
+                <li>Presentación de hallazgos</li>
+              </ul>
+            </article>
+
+            <article class="skill-group">
+              <h3>Big Data y procesamiento</h3>
+              <ul>
+                <li>Procesamiento de grandes volúmenes</li>
+                <li>Diseño de pipelines y flujos ETL</li>
+                <li>Organización de datos para análisis</li>
+                <li>Escalabilidad y trazabilidad</li>
+              </ul>
+            </article>
+
+            <article class="skill-group tech-group">
+              <h3>Tecnologías</h3>
+
+              <div class="tech-logos" role="list">
+                <div class="tech-logo-item" role="listitem">
+                  <img src="media/Python.png" alt="Python" loading="lazy" decoding="async" />
+                </div>
+
+                <div class="tech-logo-item" role="listitem">
+                  <img src="media/Sql.png" alt="SQL" loading="lazy" decoding="async" />
+                </div>
+
+                <div class="tech-logo-item" role="listitem">
+                  <img src="media/Power_BI.png" alt="Power BI" loading="lazy" decoding="async" />
+                </div>
+
+                <div class="tech-logo-item" role="listitem">
+                  <img src="media/Tableau_Logo.png" alt="Tableau" loading="lazy" decoding="async" />
+                </div>
+
+                <div class="tech-logo-item" role="listitem">
+                  <img src="media/Mongodb.png" alt="MongoDB" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cierre / propuesta -->
+      <section class="cta section">
+        <div class="container">
+          <div class="cta-box">
+            <p class="section-label">Propuesta profesional</p>
+            <h2 class="section-title">
+              Busco proyectos donde el análisis y la visualización ayuden a entender mejor la realidad.
+            </h2>
+            <p class="cta-text">
+              Me interesan retos en los que los datos permitan descubrir patrones, mejorar procesos,
+              comunicar evidencia con claridad y construir soluciones útiles para personas, equipos
+              u organizaciones.
+            </p>
+            <a href="#contacto" class="button button-primary">Hablemos de datos</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="contact section" id="contacto">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Contacto</p>
+            <h2 class="section-title">Conectemos</h2>
+            <p class="section-description">
+              Puedes escribirme para colaborar, conversar sobre proyectos o conocer más sobre mi trabajo.
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-info">
+              <h3>Información de contacto</h3>
+
+              <ul class="contact-list contact-list-icons">
+                <li>
+                  <a
+                    class="contact-link"
+                    href="mailto:santirib01@gmail.com?subject=Hola%20Santiago%2C%20vi%20tu%20portafolio&body=Hola%20Santiago%2C%0A%0ATe%20escribo%20porque%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo.%0A%0AQuedo%20atento.%0A"
+                    aria-label="Enviar correo a Santiago Ríos"
+                  >
+                    <img
+                      src="media/Gmail_icon_(2020).png"
+                      alt="Gmail"
+                      class="contact-icon"
+                      loading="lazy"
+                      decoding="async"
+                      width="34"
+                      height="34"
+                    />
+                    <span>santirib01@gmail.com</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/in/santiriosb/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir perfil de LinkedIn de Santiago Ríos"
+                  >
+                    <img
+                      src="media/Linkedin-Logo-2011.png"
+                      alt="LinkedIn"
+                      class="contact-icon contact-icon-linkedin"
+                      loading="lazy"
+                      decoding="async"
+                      width="42"
+                      height="42"
+                    />
+                    <span>linkedin.com/in/santiriosb/</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="contact-link"
+                    href="https://github.com/SantiagoRiosBen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir perfil de GitHub de Santiago Ríos"
+                  >
+                    <img
+                      src="media/github.png"
+                      alt="GitHub"
+                      class="contact-icon"
+                      loading="lazy"
+                      decoding="async"
+                      width="34"
+                      height="34"
+                    />
+                    <span>github.com/SantiagoRiosBen</span>
+                  </a>
+                </li>
+
+                <li class="contact-location">
+                  <span>Rionegro, Antioquia, Colombia</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-message">
+              <h3>Mensaje final</h3>
+              <p>
+                Gracias por visitar mi portafolio. Este espacio está diseñado para mostrar
+                cómo los datos pueden convertirse en historias claras, visuales y útiles.
+              </p>
+              <p>
+                Aquí encontrarás una selección de proyectos construidos con enfoque analítico,
+                intención comunicativa y vocación por generar impacto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Santiago Ríos B. Todos los derechos reservados.</p>
+
+          <ul class="footer-links" aria-label="Enlaces del pie de página">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
