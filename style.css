@@ -1222,3 +1222,559 @@ button:focus-visible {
     height: 40px;
   }
 }
+
+/* ===== Cabezote con imagen oscura ===== */
+.hero-cabezote {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 14, 20, 0.82) 0%,
+      rgba(10, 14, 20, 0.72) 42%,
+      rgba(10, 14, 20, 0.62) 100%
+    ),
+    url("media/Cabezote.jpg") center center / cover no-repeat;
+}
+
+.hero-cabezote .container,
+.hero-cabezote .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cabezote .hero-eyebrow {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-cabezote .hero-title {
+  color: #ffffff;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.hero-cabezote .hero-description {
+  color: rgba(255, 255, 255, 0.86);
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cabezote .hero-highlights li {
+  color: #ffffff;
+}
+
+.hero-cabezote .hero-highlights li::before {
+  background-color: #e5e7eb;
+}
+
+.hero-cabezote .button-primary {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.hero-cabezote .button-primary:hover,
+.hero-cabezote .button-primary:focus-visible {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+.hero-cabezote .button-secondary {
+  background-color: rgba(255, 255, 255, 0.96);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hero-cabezote .button-secondary:hover,
+.hero-cabezote .button-secondary:focus-visible {
+  background-color: #ffffff;
+}
+
+/* ===== Franjas divisoras entre secciones ===== */
+/* Nota: esto también mantiene coherencia con las secciones extra que hoy tienes */
+#enfoque.section::before,
+.questions.section::before,
+#proyectos.section::before,
+#proceso.section::before,
+#habilidades.section::before,
+.cta.section::before,
+#contacto.section::before {
+  content: "";
+  display: block;
+  width: min(92%, 980px);
+  height: 18px;
+  margin: 0 auto 3.25rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(203, 213, 225, 0.34),
+    rgba(100, 116, 139, 0.22),
+    rgba(203, 213, 225, 0.34),
+    rgba(255, 255, 255, 0.22)
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 10px 26px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* Ajustes responsive */
+@media (max-width: 920px) {
+  .hero-cabezote {
+    min-height: calc(82vh - var(--header-height));
+    background-position: center center;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-cabezote {
+    min-height: calc(78vh - var(--header-height));
+  }
+
+  #enfoque.section::before,
+  .questions.section::before,
+  #proyectos.section::before,
+  #proceso.section::before,
+  #habilidades.section::before,
+  .cta.section::before,
+  #contacto.section::before {
+    height: 14px;
+    margin: 0 auto 2.4rem;
+  }
+}
+
+/* ===== Títulos de sección con textura del cabezote ===== */
+.section {
+  padding: 0 0 5.5rem;
+}
+
+.hero.section {
+  padding: 7rem 0 5.5rem;
+}
+
+.section-heading {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0 0 1.8rem;
+  padding: 2.6rem 0 2.15rem;
+  isolation: isolate;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 14, 20, 0.82) 0%,
+      rgba(10, 14, 20, 0.72) 45%,
+      rgba(10, 14, 20, 0.76) 100%
+    ),
+    url("media/Cabezote.jpg") center center / cover no-repeat;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 100vw;
+  height: 28px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(248, 250, 252, 0) 0%,
+    rgba(248, 250, 252, 0.72) 60%,
+    rgba(248, 250, 252, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.section-heading .section-label {
+  color: rgba(235, 243, 255, 0.94);
+}
+
+.section-heading .section-title {
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.section-heading .section-description {
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 760px;
+}
+
+/* Primera sección: transición elegante justo después del cabezote */
+.about.section {
+  padding-top: 0;
+}
+
+.about .section-heading {
+  margin-top: 0;
+  margin-bottom: 1.35rem;
+}
+
+.about .section-heading::after {
+  height: 36px;
+}
+
+/* ===== Nuevo layout de Sobre mí ===== */
+.about-grid-main {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.about-text {
+  display: grid;
+  gap: 1.2rem;
+  padding-top: 0.1rem;
+}
+
+.about-text p {
+  font-size: 1.02rem;
+  color: var(--text-soft);
+}
+
+.about-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-photo img {
+  width: min(100%, 300px);
+  height: auto;
+  aspect-ratio: 378 / 508;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.about-summary-wide {
+  margin-top: 1.25rem;
+}
+
+.summary-card-wide {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.5rem 1.7rem;
+}
+
+.summary-card-wide h3 {
+  margin-bottom: 1rem;
+}
+
+.summary-card-wide ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem 1.4rem;
+}
+
+.summary-card-wide li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--text-soft);
+}
+
+.summary-card-wide li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+/* ===== Quitar aire excesivo en headings ===== */
+.approach .section-heading,
+.questions .section-heading,
+.projects .section-heading,
+.process .section-heading,
+.skills .section-heading,
+.contact .section-heading {
+  margin-bottom: 2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 920px) {
+  .section {
+    padding: 0 0 4.8rem;
+  }
+
+  .about-grid-main {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .about-photo-wrap {
+    justify-content: flex-start;
+  }
+
+  .summary-card-wide ul {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    padding: 2.3rem 0 1.95rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 0 0 4rem;
+  }
+
+  .section-heading {
+    padding: 2rem 0 1.7rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .section-heading .section-title {
+    margin-bottom: 0.2rem;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-photo img {
+    width: min(100%, 260px);
+  }
+}
+
+/* ===== Fondo de franjas de títulos con titulos.png, sin degradados ===== */
+
+.section-heading::before {
+  background: url("media/titulos.png") center center / cover no-repeat !important;
+}
+
+.section-heading::after {
+  display: none !important;
+}
+
+.about .section-heading::before {
+  background: url("media/titulos.png") center center / cover no-repeat !important;
+}
+
+/* ===== AJUSTE FINAL RECOMENDADO PARA FRANJAS Y TRANSICIÓN ===== */
+
+/* Hero un poco más compacto abajo */
+.hero.section {
+  padding: 6.4rem 0 3.1rem;
+}
+
+/* Suaviza el cierre del cabezote */
+.hero-cabezote {
+  position: relative;
+}
+
+.hero-cabezote::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 14, 20, 0) 0%,
+    rgba(10, 14, 20, 0.2) 58%,
+    rgba(10, 14, 20, 0.42) 100%
+  );
+  pointer-events: none;
+}
+
+/* Franjas de títulos más compactas */
+.section-heading {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0 0 1rem;
+  padding: 1.35rem 0 1rem;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Fondo con titulos.png SIN degradado */
+.section-heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: url("media/titulos.png") center center / cover no-repeat !important;
+  filter: brightness(0.25) contrast(1.08);
+}
+
+/* Sin transición blanca debajo */
+.section-heading::after {
+  display: none !important;
+}
+
+/* Mejor contraste del texto */
+.section-heading .section-label {
+  color: rgba(255, 255, 255, 0.94);
+  margin-bottom: 0.55rem;
+}
+
+.section-heading .section-title {
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.42);
+}
+
+.section-heading .section-description {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+  max-width: 760px;
+}
+
+/* Quitar el solapamiento brusco del primer título */
+.about.section {
+  padding-top: 0;
+}
+
+.about .section-heading {
+  margin-top: 0 !important;
+  margin-bottom: 0.9rem;
+  padding-top: 1.45rem;
+  padding-bottom: 0.95rem;
+}
+
+/* Menos aire entre títulos y contenido */
+.approach .section-heading,
+.questions .section-heading,
+.projects .section-heading,
+.process .section-heading,
+.skills .section-heading,
+.contact .section-heading {
+  margin-bottom: 1.15rem;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero.section {
+    padding: 5.7rem 0 2.8rem;
+  }
+
+  .section-heading {
+    padding: 1.2rem 0 0.9rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero.section {
+    padding: 5rem 0 2.4rem;
+  }
+
+  .section-heading {
+    padding: 1rem 0 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-cabezote::after {
+    height: 40px;
+  }
+}
+
+/* ===== AJUSTE DE FRANJAS Y ESPACIOS ===== */
+
+/* Más aire entre cabezote y el primer título */
+.about.section {
+  padding-top: 1.8rem;
+}
+
+.about .section-heading {
+  margin-top: 0 !important;
+}
+
+/* Alinear todos los textos de las franjas un poco más a la derecha */
+.section-heading {
+  padding-left: 1.25rem;
+  padding-right: 1rem;
+}
+
+/* Si el fondo de títulos no está ocupando bien la franja */
+.section-heading::before {
+  background: url("media/titulos.png") center center / cover no-repeat !important;
+  filter: brightness(0.23) contrast(1.08);
+}
+
+/* El subtítulo fuera de la franja */
+.section-description-outside {
+  color: var(--text-soft);
+  max-width: 760px;
+  margin: 1rem 0 2rem;
+  padding-left: 1.25rem;
+  font-size: 1.02rem;
+}
+
+/* Un poco menos de espacio entre franja y contenido */
+.approach .section-heading,
+.projects .section-heading,
+.skills .section-heading,
+.contact .section-heading {
+  margin-bottom: 0.55rem;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .about.section {
+    padding-top: 1.3rem;
+  }
+
+  .section-heading {
+    padding-left: 1rem;
+    padding-right: 0.85rem;
+  }
+
+  .section-description-outside {
+    padding-left: 1rem;
+    margin: 0.85rem 0 1.5rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .about.section {
+    padding-top: 1rem;
+  }
+
+  .section-heading {
+    padding-left: 0.85rem;
+    padding-right: 0.75rem;
+  }
+
+  .section-description-outside {
+    padding-left: 0.85rem;
+    margin: 0.75rem 0 1.25rem;
+  }
+}
