@@ -5,8 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.nav-menu a[href^="#"]')
   );
   const languageToggle = document.querySelector(".language-toggle");
+  let scrollTopButton = document.querySelector(".scroll-top-button");
   const footerText = document.querySelector(".site-footer p");
   const mobileBreakpoint = window.matchMedia("(max-width: 920px)");
+
+  if (!scrollTopButton) {
+    scrollTopButton = document.createElement("button");
+    scrollTopButton.className = "scroll-top-button";
+    scrollTopButton.type = "button";
+    scrollTopButton.setAttribute("aria-label", "Volver al inicio");
+    scrollTopButton.setAttribute("aria-hidden", "true");
+    scrollTopButton.setAttribute("title", "Volver al inicio");
+    scrollTopButton.tabIndex = -1;
+    scrollTopButton.innerHTML = '<span class="scroll-top-icon" aria-hidden="true"></span>';
+    document.body.appendChild(scrollTopButton);
+  }
 
   const translations = {
     es: {
@@ -21,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeLabel: "Cerrar menú de navegación",
       },
       languageLabel: "Cambiar idioma a inglés",
+      backToTopLabel: "Volver al inicio",
       lightboxLabel: "Vista ampliada del dashboard",
       lightboxClose: "Cerrar imagen ampliada",
       imageExpand: "Ampliar imagen del dashboard",
@@ -398,6 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeLabel: "Close navigation menu",
       },
       languageLabel: "Cambiar idioma a español",
+      backToTopLabel: "Back to top",
       lightboxLabel: "Expanded dashboard view",
       lightboxClose: "Close expanded image",
       imageExpand: "Expand dashboard image",
@@ -832,6 +847,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ?.classList.toggle("is-active", currentLanguage === "en");
     }
 
+    if (scrollTopButton) {
+      scrollTopButton.setAttribute("aria-label", copy.backToTopLabel);
+      scrollTopButton.setAttribute("title", copy.backToTopLabel);
+    }
+
     document
       .querySelectorAll(".project-image img[role='button']")
       .forEach((image) => image.setAttribute("aria-label", copy.imageExpand));
@@ -920,6 +940,38 @@ document.addEventListener("DOMContentLoaded", () => {
     languageToggle.addEventListener("click", () => {
       applyLanguage(currentLanguage === "es" ? "en" : "es");
     });
+  }
+
+  if (scrollTopButton) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const getScrollPosition = () =>
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    const updateScrollTopButton = () => {
+      const shouldShow = getScrollPosition() > 12;
+      scrollTopButton.classList.toggle("is-visible", shouldShow);
+      scrollTopButton.setAttribute("aria-hidden", String(!shouldShow));
+      scrollTopButton.tabIndex = shouldShow ? 0 : -1;
+    };
+
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    });
+
+    window.addEventListener("scroll", updateScrollTopButton, { passive: true });
+    document.addEventListener("scroll", updateScrollTopButton, {
+      passive: true,
+      capture: true,
+    });
+    window.addEventListener("resize", updateScrollTopButton);
+    updateScrollTopButton();
   }
 
   const setActiveNavLink = (id) => {
