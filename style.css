@@ -1957,3 +1957,73 @@ button:focus-visible {
     margin: 0.75rem 0 1.25rem;
   }
 }
+
+/* Resume alignment */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.resume-card,
+.education-strip {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-card {
+  padding: 1.5rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15, 118, 110, 0.22);
+  box-shadow: var(--shadow-md);
+}
+
+.resume-date {
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.resume-card h3,
+.education-strip h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.7rem;
+}
+
+.resume-card p:not(.resume-date),
+.education-strip p {
+  color: var(--text-soft);
+}
+
+.education-strip {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.4rem;
+  padding: 1.7rem;
+}
+
+@media (max-width: 1080px) {
+  .resume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .resume-grid,
+  .education-strip {
+    grid-template-columns: 1fr;
+  }
+}
