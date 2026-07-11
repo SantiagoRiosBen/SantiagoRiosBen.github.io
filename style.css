@@ -1415,7 +1415,7 @@ button:focus-visible {
       rgba(10, 14, 20, 0.72) 42%,
       rgba(10, 14, 20, 0.62) 100%
     ),
-    url("media/Cabezote.jpg") center center / cover no-repeat;
+    url("media/Cabezote gris.png") center center / cover no-repeat;
 }
 
 .hero-cabezote .container,
@@ -1559,7 +1559,7 @@ button:focus-visible {
       rgba(10, 14, 20, 0.72) 45%,
       rgba(10, 14, 20, 0.76) 100%
     ),
-    url("media/Cabezote.jpg") center center / cover no-repeat;
+    url("media/Cabezote gris.png") center center / cover no-repeat;
 }
 
 .section-heading::after {
@@ -1748,10 +1748,10 @@ button:focus-visible {
   }
 }
 
-/* ===== Fondo de franjas de títulos con titulos.png, sin degradados ===== */
+/* ===== Fondo de franjas de títulos con Títulos azul.png, sin degradados ===== */
 
 .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
 }
 
 .section-heading::after {
@@ -1759,7 +1759,7 @@ button:focus-visible {
 }
 
 .about .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
 }
 
 /* ===== AJUSTE FINAL RECOMENDADO PARA FRANJAS Y TRANSICIÓN ===== */
@@ -1801,7 +1801,7 @@ button:focus-visible {
   overflow: hidden;
 }
 
-/* Fondo con titulos.png SIN degradado */
+/* Fondo con Títulos azul.png SIN degradado */
 .section-heading::before {
   content: "";
   position: absolute;
@@ -1810,7 +1810,7 @@ button:focus-visible {
   width: 100vw;
   transform: translateX(-50%);
   z-index: -1;
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
   filter: brightness(0.25) contrast(1.08);
 }
 
@@ -1904,7 +1904,7 @@ button:focus-visible {
 
 /* Si el fondo de títulos no está ocupando bien la franja */
 .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
   filter: brightness(0.23) contrast(1.08);
 }
 
@@ -2025,5 +2025,929 @@ button:focus-visible {
   .resume-grid,
   .education-strip {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Actualización visual guía de marca gastronómica SRB ===== */
+:root {
+  --bg: #f4f0e8;
+  --surface: #fffdf8;
+  --surface-soft: #f8f1e6;
+  --text: #16324f;
+  --text-soft: #4c5870;
+  --border: rgba(22, 50, 79, 0.14);
+  --border-strong: rgba(22, 50, 79, 0.24);
+  --primary: #16324f;
+  --primary-dark: #082f4e;
+  --secondary: #7a8f72;
+  --accent: #b65e3c;
+  --white: #fffdf8;
+  --shadow-sm: 0 10px 30px rgba(22, 50, 79, 0.07);
+  --shadow-md: 0 18px 45px rgba(22, 50, 79, 0.1);
+  --shadow-lg: 0 24px 70px rgba(22, 50, 79, 0.16);
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(182, 94, 60, 0.08), transparent 24rem),
+    linear-gradient(180deg, #fffdf8 0%, var(--bg) 64%, #efe6d8 100%);
+  color: var(--text);
+}
+
+.site-header {
+  background-color: rgba(255, 253, 248, 0.92);
+  border-bottom-color: rgba(182, 94, 60, 0.16);
+}
+
+.logo {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.logo-mark { display: none; }
+
+.logo-text,
+.section-title,
+.hero-title,
+.project-title,
+.cta-box .section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--primary);
+  letter-spacing: -0.035em;
+}
+
+.logo-text {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1;
+}
+
+.logo-subtitle {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.nav-menu a,
+.language-toggle {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary);
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible,
+.nav-menu a.is-active {
+  color: var(--accent);
+}
+
+.section-label,
+.hero-eyebrow,
+.project-category,
+.resume-date {
+  color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.section-label::before,
+.section-label::after {
+  background-color: currentColor;
+}
+
+.hero-cabezote {
+  min-height: calc(100vh - var(--header-height));
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.97) 0%, rgba(255, 253, 248, 0.88) 48%, rgba(255, 253, 248, 0.45) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+  opacity: 0.85;
+}
+
+.hero-cabezote .hero-content {
+  max-width: 760px;
+}
+
+.hero-cabezote .hero-title {
+  color: var(--primary);
+  text-shadow: none;
+}
+
+.hero-cabezote .hero-description,
+.hero-cabezote .hero-highlights li {
+  color: var(--text);
+}
+
+.hero-highlights li {
+  background: rgba(255, 253, 248, 0.72);
+  border: 1px solid rgba(122, 143, 114, 0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
+.button,
+.project-contact-link {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button-primary,
+.hero-cabezote .button-primary {
+  background: linear-gradient(135deg, var(--accent), #d16f45);
+  color: #fffdf8;
+  border-color: transparent;
+  box-shadow: 0 16px 34px rgba(182, 94, 60, 0.24);
+}
+
+.button-secondary,
+.hero-cabezote .button-secondary {
+  background: rgba(255, 253, 248, 0.82);
+  color: var(--accent);
+  border-color: rgba(182, 94, 60, 0.55);
+}
+
+.about,
+.questions,
+.process,
+.contact {
+  background-color: rgba(255, 253, 248, 0.44);
+}
+
+.summary-card,
+.approach-card,
+.question-card,
+.project-card,
+.resume-card,
+.skill-group,
+.process-step,
+.contact-info,
+.contact-message,
+.education-strip {
+  background: rgba(255, 253, 248, 0.88);
+  border: 1px solid rgba(22, 50, 79, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.question-card:nth-child(1),
+.approach-card:nth-child(1) { border-top: 4px solid var(--primary); }
+.question-card:nth-child(2),
+.approach-card:nth-child(2) { border-top: 4px solid var(--accent); }
+.question-card:nth-child(3),
+.approach-card:nth-child(3) { border-top: 4px solid var(--secondary); }
+.question-card:nth-child(4) { border-top: 4px solid #2b2b2b; }
+
+.about-photo {
+  border-radius: 34px;
+  background: linear-gradient(145deg, #f4e0ce, #fffdf8);
+  border: 1px solid rgba(182, 94, 60, 0.18);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-photo img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 28px;
+}
+
+.section-heading .section-title {
+  display: inline;
+  padding: 0.2rem 0.55rem;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
+  color: #fffdf8;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cta-box {
+  background:
+    linear-gradient(90deg, rgba(8, 47, 78, 0.96), rgba(22, 50, 79, 0.88)),
+    url("media/Títulos azul.png") center center / cover no-repeat;
+  border: 1px solid rgba(255, 253, 248, 0.18);
+}
+
+.cta-box .section-title,
+.cta-box .section-label,
+.cta-text {
+  color: #fffdf8;
+}
+
+.site-footer {
+  background: linear-gradient(135deg, #082f4e, #16324f);
+  color: #fffdf8;
+}
+
+.scroll-top-button {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-color: rgba(255, 253, 248, 0.35);
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(255, 253, 248, 0.86)),
+      url("media/Cabezote gris.png") center center / cover no-repeat !important;
+  }
+
+  .logo-subtitle { max-width: 240px; }
+}
+
+
+/* ===== Ajuste final: limpiar fondos heredados y usar activos nuevos ===== */
+.hero-cabezote {
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.98) 0%, rgba(255, 253, 248, 0.88) 46%, rgba(255, 253, 248, 0.36) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote::before,
+.section-heading::before,
+.section-heading::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.section-heading {
+  isolation: auto !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.section-heading .section-title {
+  display: inline;
+  padding: 0.22rem 0.6rem;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
+  color: #fffdf8 !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-photo img {
+  content: url("media/Santiago Rios B (2).png");
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cta-box {
+  background:
+    linear-gradient(90deg, rgba(8, 47, 78, 0.94), rgba(22, 50, 79, 0.86)),
+    url("media/Títulos azul.png") center center / cover no-repeat !important;
+}
+
+.contact-icon[alt="Microsoft Outlook"] {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(255, 253, 248, 0.86)),
+      url("media/Cabezote gris.png") center center / cover no-repeat !important;
+  }
+}
+
+/* ===== Refinamiento visual: legibilidad, jerarquía y limpieza ===== */
+:root {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --hero-max-width: 760px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.62;
+}
+
+.logo-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2vw, 1.95rem);
+  letter-spacing: -0.025em;
+}
+
+.logo-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: -0.01em;
+}
+
+.nav-menu a,
+.language-toggle {
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.section {
+  padding: clamp(4rem, 7vw, 5.5rem) 0;
+}
+
+.hero-cabezote {
+  min-height: clamp(560px, 68vh, 720px) !important;
+  padding: clamp(4.5rem, 8vw, 6.5rem) 0 !important;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.98) 0%, rgba(255, 253, 248, 0.9) 48%, rgba(255, 253, 248, 0.48) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote .hero-content {
+  max-width: var(--hero-max-width);
+}
+
+.hero-eyebrow,
+.hero-cabezote .hero-eyebrow {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid rgba(22, 50, 79, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.78);
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  font-size: clamp(0.72rem, 1.2vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-shadow: none;
+}
+
+.hero-title,
+.hero-cabezote .hero-title {
+  max-width: 12ch;
+  margin-top: 1.2rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.7rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  color: var(--primary);
+  text-wrap: balance;
+}
+
+.hero-description,
+.hero-cabezote .hero-description {
+  max-width: 720px;
+  color: #16324f;
+  font-size: clamp(1.06rem, 1.7vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 650px;
+}
+
+.hero-highlights li {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.45rem 0.95rem;
+  background: rgba(255, 253, 248, 0.86);
+  border: 1px solid rgba(22, 50, 79, 0.1);
+  border-radius: 999px;
+  color: var(--primary);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.section-heading {
+  max-width: 860px;
+  margin-bottom: 2.2rem !important;
+  padding: 0 !important;
+}
+
+.section-label,
+.hero-eyebrow,
+.project-category,
+.resume-date {
+  font-family: var(--font-heading);
+}
+
+.section-label {
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.section-heading .section-title,
+.section-title,
+.cta-box .section-title,
+.project-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.section-heading .section-title {
+  display: block;
+  padding: 0 !important;
+  background: none !important;
+  color: var(--primary) !important;
+  text-shadow: none !important;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.section-description {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.about-grid-main {
+  align-items: center;
+  gap: clamp(2.2rem, 6vw, 5rem);
+}
+
+.about-text {
+  max-width: 760px;
+}
+
+.about-text p,
+.resume-card p,
+.question-card p,
+.approach-card p,
+.project-description,
+.project-case-list,
+.contact-message p {
+  font-size: 1.04rem;
+  line-height: 1.62;
+}
+
+.about-photo-wrap {
+  justify-self: center;
+}
+
+.about-photo {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 28px !important;
+  overflow: hidden;
+  max-width: min(420px, 100%);
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 28px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 18px 44px rgba(22, 50, 79, 0.12);
+}
+
+.summary-card,
+.approach-card,
+.question-card,
+.project-card,
+.resume-card,
+.skill-group,
+.process-step,
+.contact-info,
+.contact-message,
+.education-strip {
+  border-color: rgba(22, 50, 79, 0.11);
+  box-shadow: 0 14px 38px rgba(22, 50, 79, 0.06);
+}
+
+.cta-box {
+  background:
+    linear-gradient(90deg, rgba(8, 47, 78, 0.95), rgba(22, 50, 79, 0.86)),
+    url("media/Títulos azul.png") center center / cover no-repeat !important;
+}
+
+.cta-box .section-title {
+  color: #fffdf8 !important;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    min-height: auto !important;
+    padding: 4.2rem 0 !important;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(255, 253, 248, 0.84)),
+      url("media/Cabezote gris.png") center center / cover no-repeat !important;
+  }
+
+  .hero-title,
+  .hero-cabezote .hero-title {
+    max-width: 11ch;
+    font-size: clamp(2.7rem, 14vw, 4.6rem);
+  }
+
+  .hero-actions,
+  .cta-actions {
+    align-items: stretch;
+  }
+
+  .hero-highlights li {
+    width: 100%;
+  }
+
+  .about-photo {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-title,
+  .hero-cabezote .hero-title {
+    max-width: 10ch;
+    font-size: clamp(2.45rem, 16vw, 3.75rem);
+  }
+
+  .section-heading .section-title {
+    font-size: clamp(1.85rem, 10vw, 2.55rem);
+  }
+}
+
+/* ===== Corrección solicitada: hero más horizontal, textos legibles y franjas de marca ===== */
+.hero-cabezote {
+  min-height: clamp(500px, 60vh, 660px) !important;
+  padding: clamp(3.8rem, 6.5vw, 5.6rem) 0 !important;
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.98) 0%, rgba(255, 253, 248, 0.9) 54%, rgba(255, 253, 248, 0.5) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote .hero-content {
+  max-width: min(100%, 1080px) !important;
+}
+
+.hero-title,
+.hero-cabezote .hero-title {
+  max-width: 980px !important;
+  font-size: clamp(3rem, 5.25vw, 4.9rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.045em !important;
+  text-wrap: balance;
+}
+
+.hero-description,
+.hero-cabezote .hero-description {
+  max-width: 900px !important;
+}
+
+.hero-actions,
+.hero-highlights {
+  max-width: 980px !important;
+}
+
+/* Los encabezados de sección no deben quedar blancos sobre fondos claros. */
+.section-heading,
+.about .section-heading,
+.approach .section-heading,
+.questions .section-heading,
+.projects .section-heading,
+.process .section-heading,
+.skills .section-heading,
+.contact .section-heading {
+  background: transparent !important;
+  color: var(--primary) !important;
+}
+
+.section-heading .section-label,
+.about .section-heading .section-label,
+.resume .section-heading .section-label,
+.contact .section-heading .section-label {
+  color: var(--accent) !important;
+  text-shadow: none !important;
+}
+
+.section-heading .section-title,
+.about .section-heading .section-title,
+.resume .section-heading .section-title,
+.contact .section-heading .section-title {
+  color: var(--primary) !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+
+.section-heading .section-description,
+.resume .section-heading .section-description,
+.contact .section-heading .section-description {
+  color: var(--text-soft) !important;
+  text-shadow: none !important;
+}
+
+/* Reemplaza las franjas lavadas/grises por una franja sólida con colores de marca. */
+#enfoque.section::before,
+.questions.section::before,
+#proyectos.section::before,
+#proceso.section::before,
+#habilidades.section::before,
+.cta.section::before,
+#contacto.section::before {
+  height: 8px !important;
+  width: min(92%, var(--max-width)) !important;
+  margin: 0 auto clamp(2rem, 4vw, 3rem) !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 52%, var(--secondary) 100%) !important;
+  box-shadow: 0 12px 26px rgba(22, 50, 79, 0.12) !important;
+  backdrop-filter: none !important;
+}
+
+.hero-cabezote::after {
+  height: 8px !important;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary)) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    min-height: auto !important;
+    padding: 3.8rem 0 4.3rem !important;
+  }
+
+  .hero-title,
+  .hero-cabezote .hero-title {
+    max-width: 12ch !important;
+    font-size: clamp(2.65rem, 12vw, 4.2rem) !important;
+  }
+}
+
+/* ===== Ajustes solicitados: títulos extendidos, viñetas y timeline D3 ===== */
+.nav-menu a {
+  white-space: nowrap;
+}
+
+.header-content {
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+.section-heading {
+  max-width: 1040px !important;
+}
+
+.section-heading .section-title {
+  max-width: 1000px;
+  font-size: clamp(2.25rem, 4.6vw, 4.05rem) !important;
+}
+
+.hero-highlights {
+  padding-left: clamp(1rem, 2.6vw, 2.2rem) !important;
+}
+
+.hero-highlights li {
+  margin-left: clamp(0.45rem, 1vw, 0.9rem);
+  padding-left: 1.15rem !important;
+}
+
+.timeline-card {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(22, 50, 79, 0.12);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(248, 241, 230, 0.92));
+  box-shadow: 0 18px 48px rgba(22, 50, 79, 0.08);
+}
+
+.timeline-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.2rem;
+  align-items: end;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-header h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.timeline-header p {
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.professional-timeline {
+  position: relative;
+  min-height: 460px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(182, 94, 60, 0.11), transparent 24rem),
+    linear-gradient(135deg, rgba(255, 253, 248, 0.98), rgba(244, 240, 232, 0.9));
+  overflow: hidden;
+}
+
+.professional-timeline svg {
+  display: block;
+  width: 100%;
+  min-height: 430px;
+}
+
+.timeline-axis {
+  stroke: var(--primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.timeline-ticks line {
+  stroke: rgba(22, 50, 79, 0.24);
+  stroke-width: 2;
+}
+
+.timeline-ticks text,
+.timeline-year,
+.timeline-category {
+  font-family: var(--font-heading);
+  fill: var(--primary);
+}
+
+.timeline-ticks text {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.timeline-node {
+  cursor: pointer;
+  outline: none;
+}
+
+.timeline-node circle {
+  stroke: #fffdf8;
+  stroke-width: 5;
+  filter: drop-shadow(0 10px 16px rgba(22, 50, 79, 0.2));
+  transition: r var(--transition), filter var(--transition), stroke-width var(--transition);
+}
+
+.timeline-node:hover circle,
+.timeline-node:focus-visible circle,
+.timeline-node.is-active circle {
+  r: 20;
+  stroke-width: 6;
+  filter: drop-shadow(0 14px 20px rgba(22, 50, 79, 0.28));
+}
+
+.timeline-connector {
+  stroke: rgba(22, 50, 79, 0.18);
+  stroke-width: 2;
+  stroke-dasharray: 4 7;
+}
+
+.timeline-year {
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.timeline-category {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.timeline-detail {
+  position: absolute;
+  left: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 1.6rem);
+  z-index: 2;
+  max-width: 680px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(22, 50, 79, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.93);
+  box-shadow: 0 16px 34px rgba(22, 50, 79, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.timeline-detail-year {
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.timeline-detail h4 {
+  margin: 0 0 0.35rem;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.15;
+}
+
+.timeline-detail p:last-child {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.professional-timeline.is-enhanced + .timeline-fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.timeline-fallback {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+  padding-left: 1.2rem;
+  color: var(--text-soft);
+}
+
+@media (max-width: 1100px) {
+  .nav-menu a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .timeline-header {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .professional-timeline {
+    min-height: 650px;
+  }
+
+  .professional-timeline svg {
+    min-height: 620px;
+  }
+
+  .timeline-detail {
+    max-width: none;
+  }
+
+  .hero-highlights {
+    padding-left: 0 !important;
+  }
+
+  .hero-highlights li {
+    margin-left: 0;
+  }
+}
+
+/* ===== Ajuste timeline: tarjeta de detalle fuera de la línea y categorías localizadas ===== */
+.professional-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0 !important;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  overflow: visible !important;
+}
+
+.professional-timeline svg {
+  flex: 0 0 auto;
+  min-height: 430px;
+}
+
+.timeline-detail {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(100%, 780px);
+  max-width: 780px !important;
+  margin: 0 auto;
+  transform: none !important;
+}
+
+@media (max-width: 920px) {
+  .professional-timeline {
+    min-height: 0 !important;
+    padding: 0.9rem;
+  }
+
+  .professional-timeline svg {
+    min-height: 620px;
   }
 }
