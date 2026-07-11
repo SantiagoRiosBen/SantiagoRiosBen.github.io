@@ -870,10 +870,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Formación gastronómica",
       color: "#16324f",
       es: {
+        category: "Formación gastronómica",
         title: "Gastrónomo y Cocinero Profesional",
         description: "Formación como Gastrónomo y Cocinero Profesional en la Colegiatura Colombiana.",
       },
       en: {
+        category: "Culinary training",
         title: "Gastronomist and Professional Cook",
         description: "Professional training in gastronomy and cooking at Colegiatura Colombiana.",
       },
@@ -886,10 +888,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Operación",
       color: "#b65e3c",
       es: {
+        category: "Operación",
         title: "Supervisor Operativo · MERA Corporation",
         description: "Participación en apertura de operación aeroportuaria, control de calidad, proveedores, abastecimiento y servicio.",
       },
       en: {
+        category: "Operations",
         title: "Operations Supervisor · MERA Corporation",
         description: "Airport operation opening, quality control, suppliers, procurement, and service processes.",
       },
@@ -902,10 +906,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Educación",
       color: "#7a8f72",
       es: {
+        category: "Educación",
         title: "Especialización en Pedagogía y Didáctica",
         description: "Fortalecimiento de competencias educativas y metodológicas.",
       },
       en: {
+        category: "Education",
         title: "Specialization in Pedagogy and Didactics",
         description: "Strengthened educational and methodological capabilities.",
       },
@@ -918,10 +924,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Investigación",
       color: "#16324f",
       es: {
+        category: "Investigación",
         title: "Maestría en Educación",
         description: "Consolidación de una visión académica, investigativa y formativa.",
       },
       en: {
+        category: "Research",
         title: "Master's in Education",
         description: "Consolidated an academic, research-oriented, and formative perspective.",
       },
@@ -934,10 +942,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Sostenibilidad",
       color: "#7a8f72",
       es: {
+        category: "Sostenibilidad",
         title: "Docente Investigador · Colegiatura Colombiana",
         description: "Liderazgo en proyectos de seguridad alimentaria, sostenibilidad y reducción del desperdicio de alimentos.",
       },
       en: {
+        category: "Sustainability",
         title: "Research Lecturer · Colegiatura Colombiana",
         description: "Led food security, sustainability, and food-waste reduction projects.",
       },
@@ -950,10 +960,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Docencia",
       color: "#b65e3c",
       es: {
+        category: "Docencia",
         title: "Docente · Universidad CES",
         description: "Integración de gastronomía, nutrición, salud, cultura y técnica culinaria.",
       },
       en: {
+        category: "Teaching",
         title: "Lecturer · Universidad CES",
         description: "Integrated gastronomy, nutrition, health, culture, and culinary technique.",
       },
@@ -966,10 +978,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Liderazgo académico",
       color: "#16324f",
       es: {
+        category: "Liderazgo académico",
         title: "Jefe de Carrera · Colegiatura Colombiana",
         description: "Gestión curricular, seguimiento académico, acreditación, organización de información y articulación con el sector gastronómico.",
       },
       en: {
+        category: "Academic leadership",
         title: "Program Director · Colegiatura Colombiana",
         description: "Curriculum management, academic follow-up, accreditation, information organization, and connection with the gastronomic sector.",
       },
@@ -982,10 +996,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Analítica y BI",
       color: "#b65e3c",
       es: {
+        category: "Analítica y BI",
         title: "Máster en Análisis y Visualización de Big Data",
         description: "Fortalecimiento de capacidades en analítica, Business Intelligence, visualización y toma de decisiones basada en datos.",
       },
       en: {
+        category: "Analytics and BI",
         title: "Master's in Big Data Analysis and Visualization",
         description: "Strengthened analytics, Business Intelligence, visualization, and data-driven decision-making capabilities.",
       },
@@ -1006,10 +1022,6 @@ document.addEventListener("DOMContentLoaded", () => {
       : { top: 58, right: 64, bottom: 120, left: 64 };
 
     container.innerHTML = "";
-    const detail = document.createElement("div");
-    detail.className = "timeline-detail";
-    detail.setAttribute("aria-live", "polite");
-    container.appendChild(detail);
 
     const svg = d3
       .select(container)
@@ -1080,7 +1092,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("class", "timeline-category")
       .attr("y", 39)
       .attr("text-anchor", "middle")
-      .text((d) => d.category);
+      .text((d) => d[lang].category || d.category);
+
+    const detail = document.createElement("div");
+    detail.className = "timeline-detail";
+    detail.setAttribute("aria-live", "polite");
+    container.appendChild(detail);
 
     const setActive = (event, d) => {
       nodes.classed("is-active", (item) => item.id === d.id);
