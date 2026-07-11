@@ -26,6 +26,9 @@
     <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="style.css?v=20260706" />
 
+    <!-- Librería D3 para la línea de tiempo interactiva -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+
     <!-- JavaScript externo -->
     <script src="app.js?v=20260706" defer></script>
   </head>
@@ -166,34 +169,33 @@
             <p class="section-label">Trayectoria</p>
             <h2 class="section-title">Experiencia y formación alineadas con mi propuesta de valor</h2>
             <p class="section-description">
-              Mi hoja de vida combina liderazgo académico, docencia, investigación aplicada, gestión operativa y formación en Big Data para convertir información compleja en decisiones claras.
+              Mi trayectoria combina liderazgo académico, docencia, investigación aplicada, gestión operativa y formación en Big Data para convertir información compleja en decisiones claras.
             </p>
           </div>
 
-          <div class="resume-grid">
-            <article class="resume-card">
-              <p class="resume-date">Jul. 2024 – Jul. 2026</p>
-              <h3>Jefe de carrera · Colegiatura Colombiana</h3>
-              <p>Coordinación de Gastronomía y Cocina Profesional, gestión curricular, seguimiento académico, apoyo a acreditación y uso de información institucional para toma de decisiones.</p>
-            </article>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Línea de tiempo profesional</h3>
+              <p>Explora los hitos con el cursor, teclado o toque para ver cómo se conecta la experiencia gastronómica, educativa y analítica.</p>
+            </div>
 
-            <article class="resume-card">
-              <p class="resume-date">Ene. 2024 – Jun. 2024</p>
-              <h3>Docente · Universidad CES</h3>
-              <p>Módulos de gastronomía para Nutrición y Dietética, diseño de experiencias formativas y articulación entre alimentación, salud, cultura y técnica culinaria.</p>
-            </article>
+            <div
+              id="professional-timeline"
+              class="professional-timeline"
+              role="img"
+              aria-label="Línea de tiempo profesional de Santiago Ríos Benjumea"
+            ></div>
 
-            <article class="resume-card">
-              <p class="resume-date">Ene. 2022 – Dic. 2023</p>
-              <h3>Docente investigador · Colegiatura Colombiana</h3>
-              <p>Investigación aplicada en seguridad alimentaria y sostenibilidad, diseño de estrategias contra el desperdicio de alimentos y sistematización de diagnósticos accionables.</p>
-            </article>
-
-            <article class="resume-card">
-              <p class="resume-date">Feb. 2019 – Ago. 2019</p>
-              <h3>Supervisor operativo · MERA Corporation</h3>
-              <p>Supervisión de calidad, proveedores y procesos de servicio en operaciones aeroportuarias, incluyendo apoyo a apertura operativa en entorno de alta demanda.</p>
-            </article>
+            <ol class="timeline-fallback" aria-label="Hitos de trayectoria profesional">
+              <li><strong>2014 – 2018:</strong> Formación como Gastrónomo y Cocinero Profesional en la Colegiatura Colombiana.</li>
+              <li><strong>2019:</strong> Experiencia como Supervisor Operativo en MERA Corporation, participando en apertura de operación aeroportuaria, control de calidad, proveedores, abastecimiento y servicio.</li>
+              <li><strong>2021 – 2022:</strong> Especialización en Pedagogía y Didáctica, fortaleciendo competencias educativas y metodológicas.</li>
+              <li><strong>2021 – 2023:</strong> Maestría en Educación, consolidando una visión académica, investigativa y formativa.</li>
+              <li><strong>2022 – 2023:</strong> Experiencia como Docente Investigador en Colegiatura Colombiana, liderando proyectos de seguridad alimentaria, sostenibilidad y reducción del desperdicio de alimentos.</li>
+              <li><strong>2024:</strong> Docente en Universidad CES, integrando gastronomía, nutrición, salud, cultura y técnica culinaria.</li>
+              <li><strong>2024 – 2026:</strong> Jefe de Carrera de Gastronomía y Cocina Profesional en Colegiatura Colombiana, liderando gestión curricular, seguimiento académico, acreditación, organización de información y articulación con el sector gastronómico.</li>
+              <li><strong>2025 – 2026:</strong> Formación como Máster en Análisis y Visualización de Big Data, fortaleciendo capacidades en analítica, Business Intelligence, visualización y toma de decisiones basada en datos.</li>
+            </ol>
           </div>
 
           <div class="education-strip" aria-label="Formación académica e idiomas">

@@ -119,7 +119,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           selector: ".resume .section-description",
-          text: "Mi hoja de vida combina liderazgo académico, docencia, investigación aplicada, gestión operativa y formación en Big Data para convertir información compleja en decisiones claras.",
+          text: "Mi trayectoria combina liderazgo académico, docencia, investigación aplicada, gestión operativa y formación en Big Data para convertir información compleja en decisiones claras.",
+        },
+        { selector: ".timeline-header h3", text: "Línea de tiempo profesional" },
+        {
+          selector: ".timeline-header p",
+          text: "Explora los hitos con el cursor, teclado o toque para ver cómo se conecta la experiencia gastronómica, educativa y analítica.",
         },
         { selector: ".resume-card:nth-child(1) h3", text: "Jefe de carrera · Colegiatura Colombiana" },
         { selector: ".resume-card:nth-child(1) p:nth-child(3)", text: "Coordinación de Gastronomía y Cocina Profesional, gestión curricular, seguimiento académico, apoyo a acreditación y uso de información institucional para toma de decisiones." },
@@ -522,7 +527,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           selector: ".resume .section-description",
-          text: "My resume combines academic leadership, teaching, applied research, operations management, and Big Data training to turn complex information into clear decisions.",
+          text: "My professional path combines academic leadership, teaching, applied research, operations management, and Big Data training to turn complex information into clear decisions.",
+        },
+        { selector: ".timeline-header h3", text: "Professional timeline" },
+        {
+          selector: ".timeline-header p",
+          text: "Explore each milestone with cursor, keyboard, or touch to see how gastronomy, education, and analytics connect.",
         },
         { selector: ".resume-card:nth-child(1) h3", text: "Program Director · Colegiatura Colombiana" },
         { selector: ".resume-card:nth-child(1) p:nth-child(3)", text: "Coordination of the Gastronomy and Professional Cooking program, curriculum management, academic follow-up, accreditation support, and use of institutional information for decision-making." },
@@ -850,6 +860,250 @@ document.addEventListener("DOMContentLoaded", () => {
   let isLightboxOpen = false;
   let currentLanguage = getStoredLanguage() === "en" ? "en" : "es";
 
+
+  const timelineData = [
+    {
+      id: "gastronomia",
+      start: 2014,
+      end: 2018,
+      year: "2014 – 2018",
+      category: "Formación gastronómica",
+      color: "#16324f",
+      es: {
+        title: "Gastrónomo y Cocinero Profesional",
+        description: "Formación como Gastrónomo y Cocinero Profesional en la Colegiatura Colombiana.",
+      },
+      en: {
+        title: "Gastronomist and Professional Cook",
+        description: "Professional training in gastronomy and cooking at Colegiatura Colombiana.",
+      },
+    },
+    {
+      id: "mera",
+      start: 2019,
+      end: 2019,
+      year: "2019",
+      category: "Operación",
+      color: "#b65e3c",
+      es: {
+        title: "Supervisor Operativo · MERA Corporation",
+        description: "Participación en apertura de operación aeroportuaria, control de calidad, proveedores, abastecimiento y servicio.",
+      },
+      en: {
+        title: "Operations Supervisor · MERA Corporation",
+        description: "Airport operation opening, quality control, suppliers, procurement, and service processes.",
+      },
+    },
+    {
+      id: "pedagogia",
+      start: 2021,
+      end: 2022,
+      year: "2021 – 2022",
+      category: "Educación",
+      color: "#7a8f72",
+      es: {
+        title: "Especialización en Pedagogía y Didáctica",
+        description: "Fortalecimiento de competencias educativas y metodológicas.",
+      },
+      en: {
+        title: "Specialization in Pedagogy and Didactics",
+        description: "Strengthened educational and methodological capabilities.",
+      },
+    },
+    {
+      id: "maestria-educacion",
+      start: 2021.25,
+      end: 2023,
+      year: "2021 – 2023",
+      category: "Investigación",
+      color: "#16324f",
+      es: {
+        title: "Maestría en Educación",
+        description: "Consolidación de una visión académica, investigativa y formativa.",
+      },
+      en: {
+        title: "Master's in Education",
+        description: "Consolidated an academic, research-oriented, and formative perspective.",
+      },
+    },
+    {
+      id: "docente-investigador",
+      start: 2022,
+      end: 2023,
+      year: "2022 – 2023",
+      category: "Sostenibilidad",
+      color: "#7a8f72",
+      es: {
+        title: "Docente Investigador · Colegiatura Colombiana",
+        description: "Liderazgo en proyectos de seguridad alimentaria, sostenibilidad y reducción del desperdicio de alimentos.",
+      },
+      en: {
+        title: "Research Lecturer · Colegiatura Colombiana",
+        description: "Led food security, sustainability, and food-waste reduction projects.",
+      },
+    },
+    {
+      id: "ces",
+      start: 2024,
+      end: 2024,
+      year: "2024",
+      category: "Docencia",
+      color: "#b65e3c",
+      es: {
+        title: "Docente · Universidad CES",
+        description: "Integración de gastronomía, nutrición, salud, cultura y técnica culinaria.",
+      },
+      en: {
+        title: "Lecturer · Universidad CES",
+        description: "Integrated gastronomy, nutrition, health, culture, and culinary technique.",
+      },
+    },
+    {
+      id: "jefe-carrera",
+      start: 2024.15,
+      end: 2026,
+      year: "2024 – 2026",
+      category: "Liderazgo académico",
+      color: "#16324f",
+      es: {
+        title: "Jefe de Carrera · Colegiatura Colombiana",
+        description: "Gestión curricular, seguimiento académico, acreditación, organización de información y articulación con el sector gastronómico.",
+      },
+      en: {
+        title: "Program Director · Colegiatura Colombiana",
+        description: "Curriculum management, academic follow-up, accreditation, information organization, and connection with the gastronomic sector.",
+      },
+    },
+    {
+      id: "big-data",
+      start: 2025,
+      end: 2026,
+      year: "2025 – 2026",
+      category: "Analítica y BI",
+      color: "#b65e3c",
+      es: {
+        title: "Máster en Análisis y Visualización de Big Data",
+        description: "Fortalecimiento de capacidades en analítica, Business Intelligence, visualización y toma de decisiones basada en datos.",
+      },
+      en: {
+        title: "Master's in Big Data Analysis and Visualization",
+        description: "Strengthened analytics, Business Intelligence, visualization, and data-driven decision-making capabilities.",
+      },
+    },
+  ];
+
+  const renderProfessionalTimeline = () => {
+    const container = document.getElementById("professional-timeline");
+    if (!container || typeof d3 === "undefined") return;
+
+    const lang = currentLanguage === "en" ? "en" : "es";
+    const bounds = container.getBoundingClientRect();
+    const width = Math.max(bounds.width || container.clientWidth || 320, 320);
+    const isCompact = width < 720;
+    const height = isCompact ? 620 : 430;
+    const margin = isCompact
+      ? { top: 36, right: 28, bottom: 96, left: 28 }
+      : { top: 58, right: 64, bottom: 120, left: 64 };
+
+    container.innerHTML = "";
+    const detail = document.createElement("div");
+    detail.className = "timeline-detail";
+    detail.setAttribute("aria-live", "polite");
+    container.appendChild(detail);
+
+    const svg = d3
+      .select(container)
+      .append("svg")
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("role", "application")
+      .attr("aria-label", lang === "es" ? "Línea de tiempo profesional interactiva" : "Interactive professional timeline");
+
+    const x = d3.scaleLinear().domain([2014, 2026]).range([margin.left, width - margin.right]);
+    const y = isCompact
+      ? (_d, i) => margin.top + 34 + i * 58
+      : (_d, i) => margin.top + (i % 2 === 0 ? 86 : 190);
+
+    const axisY = isCompact ? height - margin.bottom + 28 : height - margin.bottom;
+
+    svg
+      .append("line")
+      .attr("class", "timeline-axis")
+      .attr("x1", margin.left)
+      .attr("x2", width - margin.right)
+      .attr("y1", axisY)
+      .attr("y2", axisY);
+
+    svg
+      .append("g")
+      .attr("class", "timeline-ticks")
+      .selectAll("g")
+      .data(d3.range(2014, 2027, 2))
+      .join("g")
+      .attr("transform", (d) => `translate(${x(d)},${axisY})`)
+      .call((g) => {
+        g.append("line").attr("y2", 10);
+        g.append("text").attr("y", 30).attr("text-anchor", "middle").text((d) => d);
+      });
+
+    const nodes = svg
+      .append("g")
+      .attr("class", "timeline-nodes")
+      .selectAll("g")
+      .data(timelineData)
+      .join("g")
+      .attr("class", "timeline-node")
+      .attr("tabindex", 0)
+      .attr("role", "button")
+      .attr("aria-label", (d) => `${d.year}. ${d[lang].title}. ${d[lang].description}`)
+      .attr("transform", (d, i) => `translate(${x((d.start + d.end) / 2)},${y(d, i)})`);
+
+    nodes
+      .append("line")
+      .attr("class", "timeline-connector")
+      .attr("y1", 15)
+      .attr("y2", (_d, i) => axisY - y(_d, i) - 8);
+
+    nodes
+      .append("circle")
+      .attr("r", 14)
+      .attr("fill", (d) => d.color);
+
+    nodes
+      .append("text")
+      .attr("class", "timeline-year")
+      .attr("y", -26)
+      .attr("text-anchor", "middle")
+      .text((d) => d.year);
+
+    nodes
+      .append("text")
+      .attr("class", "timeline-category")
+      .attr("y", 39)
+      .attr("text-anchor", "middle")
+      .text((d) => d.category);
+
+    const setActive = (event, d) => {
+      nodes.classed("is-active", (item) => item.id === d.id);
+      detail.innerHTML = `
+        <p class="timeline-detail-year">${d.year}</p>
+        <h4>${d[lang].title}</h4>
+        <p>${d[lang].description}</p>
+      `;
+    };
+
+    nodes
+      .on("mouseenter focus click touchstart", setActive)
+      .on("keydown", (event, d) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setActive(event, d);
+        }
+      });
+
+    setActive(null, timelineData[timelineData.length - 1]);
+    container.classList.add("is-enhanced");
+  };
+
   const syncBodyScrollLock = () => {
     document.body.style.overflow = isMenuOpen || isLightboxOpen ? "hidden" : "";
   };
@@ -916,6 +1170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     updateToggleState(isMenuOpen);
+    renderProfessionalTimeline();
 
     if (shouldPersist) {
       storeLanguage(currentLanguage);
@@ -1185,6 +1440,12 @@ document.addEventListener("DOMContentLoaded", () => {
       event.stopPropagation();
     });
   }
+
+  let timelineResizeTimer;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(timelineResizeTimer);
+    timelineResizeTimer = window.setTimeout(renderProfessionalTimeline, 160);
+  });
 
   applyLanguage(currentLanguage, false);
 });
