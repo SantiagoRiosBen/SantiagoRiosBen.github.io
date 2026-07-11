@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     es: {
       htmlLang: "es",
-      pageTitle: "Santiago Ríos B. | Portafolio interdisciplinario",
+      pageTitle: "Santiago Ríos Benjumea | Inteligencia de negocios gastronómicos",
       metaDescription:
-        "Portafolio de Santiago Ríos enfocado en liderazgo académico, investigación aplicada, analítica de datos, Business Intelligence y sostenibilidad alimentaria.",
+        "Portafolio de Santiago Ríos Benjumea, profesional en inteligencia de negocios gastronómicos para restaurantes, cafés, hoteles y negocios HORECA.",
       navToggle: {
         open: "Menú",
         close: "Cerrar",
@@ -45,72 +45,72 @@ document.addEventListener("DOMContentLoaded", () => {
         { selector: ".main-nav", attrs: { "aria-label": "Navegación principal" } },
         { selector: ".nav-menu li:nth-child(1) a", text: "Sobre mí" },
         { selector: ".nav-menu li:nth-child(2) a", text: "Trayectoria" },
-        { selector: ".nav-menu li:nth-child(3) a", text: "Enfoque" },
-        { selector: ".nav-menu li:nth-child(4) a", text: "Proyectos" },
+        { selector: ".nav-menu li:nth-child(3) a", text: "Servicios" },
+        { selector: ".nav-menu li:nth-child(4) a", text: "Casos" },
         { selector: ".nav-menu li:nth-child(5) a", text: "Proceso" },
-        { selector: ".nav-menu li:nth-child(6) a", text: "Habilidades" },
+        { selector: ".nav-menu li:nth-child(6) a", text: "Herramientas" },
         { selector: ".nav-menu li:nth-child(7) a", text: "Contacto" },
-        { selector: ".hero-eyebrow", text: "Liderazgo académico · Investigación aplicada · Analítica de datos · Sostenibilidad alimentaria" },
+        { selector: ".hero-eyebrow", text: "Datos que cocinan mejores decisiones" },
         {
           selector: ".hero-title",
-          text: "Conecto educación, alimentación, sostenibilidad y datos para tomar decisiones claras.",
+          text: "Convierte los datos de tu negocio gastronómico en decisiones rentables",
         },
         {
           selector: ".hero-description",
-          text: "Soy Santiago Ríos Benjumea, profesional interdisciplinario con experiencia en educación superior, investigación aplicada, gestión académica y Business Intelligence. Uso Python, SQL, Power BI y Tableau para transformar información compleja en indicadores, diagnósticos y hallazgos accionables.",
+          text: "Ayudo a restaurantes, cafés, hoteles y negocios HORECA a entender ventas, costos, menú, proveedores y operación para tomar decisiones claras, mejorar la rentabilidad y crecer con orden.",
         },
-        { selector: ".hero-actions .button-primary", text: "Ver casos de estudio" },
-        { selector: ".hero-actions .button-secondary", text: "Hablemos de proyectos" },
+        { selector: ".hero-actions .button-primary", text: "Ver servicios" },
+        { selector: ".hero-actions .button-secondary", text: "Solicitar diagnóstico" },
         {
           selector: ".hero-highlights",
           attrs: { "aria-label": "Aspectos destacados" },
         },
         {
           selector: ".hero-highlights li:nth-child(1)",
-          text: "Gestión académica e institucional basada en información",
+          text: "Diagnóstico de rentabilidad gastronómica",
         },
         {
           selector: ".hero-highlights li:nth-child(2)",
-          text: "Investigación aplicada en seguridad alimentaria y sostenibilidad",
+          text: "Ingeniería de menú basada en datos",
         },
         {
           selector: ".hero-highlights li:nth-child(3)",
-          text: "Dashboards, KPIs y storytelling para decisiones estratégicas",
+          text: "Dashboards HORECA y decisiones accionables",
         },
         { selector: ".about .section-label", text: "Sobre mí" },
-        { selector: ".about .section-title", text: "Un perfil que integra academia, investigación, sostenibilidad y datos" },
+        { selector: ".about .section-title", text: "Criterio gastronómico + analítica para negocios más rentables" },
         {
           selector: ".about-text p:nth-child(1)",
-          text: "Soy Santiago Ríos Benjumea, un profesional interdisciplinario con experiencia en educación superior, investigación aplicada, sostenibilidad, gestión académica y análisis de datos para apoyar decisiones estratégicas en organizaciones académicas, sociales y empresariales.",
+          text: "Soy Santiago Ríos Benjumea, profesional en inteligencia de negocios gastronómicos. Combino conocimiento del sector, operación y análisis de datos para que restaurantes, cafés, hoteles y negocios HORECA decidan con información clara.",
         },
         {
           selector: ".about-text p:nth-child(2)",
-          text: "Actualmente curso el Máster Oficial en Análisis y Visualización de Big Data y he liderado procesos académicos, proyectos de seguridad alimentaria y estrategias basadas en información para optimizar procesos, diseñar indicadores y comunicar hallazgos de valor.",
+          text: "Mi trabajo traduce ventas, costos, inventarios, proveedores y comportamiento del menú en indicadores, tableros y recomendaciones prácticas orientadas a rentabilidad y control operativo.",
         },
         {
           selector: ".about-text p:nth-child(3)",
-          text: "Mi propuesta conecta alimentación, educación, sostenibilidad y analítica: uso los datos como puente entre el conocimiento académico, la mejora de procesos, la comunicación de resultados y la toma de decisiones estratégicas.",
+          text: "Mi propuesta no es solo analítica ni solo gastronomía: integra negocio, cocina y BI para convertir información dispersa en decisiones accionables.",
         },
         {
           selector: ".about-photo img",
           attrs: { alt: "Fotografía profesional de Santiago Ríos" },
         },
-        { selector: ".summary-card-wide h3", text: "Enfoque profesional" },
+        { selector: ".summary-card-wide h3", text: "Esencia de marca" },
         {
           selector: ".summary-card-wide li:nth-child(1)",
-          text: "Gestión académica y liderazgo institucional",
+          text: "Datos claros para decisiones rentables",
         },
         {
           selector: ".summary-card-wide li:nth-child(2)",
-          text: "Investigación aplicada en seguridad alimentaria",
+          text: "Rentabilidad, costos e ingeniería de menú",
         },
         {
           selector: ".summary-card-wide li:nth-child(3)",
-          text: "Analítica estratégica, BI, KPIs y visualización",
+          text: "Dashboards, KPIs y reportes simples",
         },
         {
           selector: ".summary-card-wide li:nth-child(4)",
-          text: "Mejora de procesos, calidad y sostenibilidad",
+          text: "Operación gastronómica ordenada y sostenible",
         },
         { selector: ".resume .section-label", text: "Trayectoria" },
         {
@@ -158,27 +158,27 @@ document.addEventListener("DOMContentLoaded", () => {
         { selector: ".questions .section-label", text: "Preguntas de valor" },
         {
           selector: ".questions .section-title",
-          text: "Problemas que me interesa resolver con datos",
+          text: "¿Qué problemas resuelvo?",
         },
-        { selector: ".question-card:nth-child(1) h3", text: "Comportamiento" },
+        { selector: ".question-card:nth-child(1) h3", text: "Costos sin control" },
         {
           selector: ".question-card:nth-child(1) p",
-          text: "¿Qué patrones explican cambios en usuarios, clientes o procesos?",
+          text: "Identifico cuánto cuesta realmente producir y vender para proteger el margen.",
         },
-        { selector: ".question-card:nth-child(2) h3", text: "Desempeño" },
+        { selector: ".question-card:nth-child(2) h3", text: "Menú sin ingeniería" },
         {
           selector: ".question-card:nth-child(2) p",
-          text: "¿Qué indicadores muestran oportunidades de mejora o riesgo?",
+          text: "Analizo margen, popularidad y costos para maximizar rentabilidad por plato.",
         },
-        { selector: ".question-card:nth-child(3) h3", text: "Segmentación" },
+        { selector: ".question-card:nth-child(3) h3", text: "Compras sin estrategia" },
         {
           selector: ".question-card:nth-child(3) p",
-          text: "¿Qué grupos o perfiles se comportan de forma distinta y por qué?",
+          text: "Ordeno proveedores, inventarios y compras para reducir fugas y sobrecostos.",
         },
-        { selector: ".question-card:nth-child(4) h3", text: "Escalabilidad" },
+        { selector: ".question-card:nth-child(4) h3", text: "Decisiones por intuición" },
         {
           selector: ".question-card:nth-child(4) p",
-          text: "¿Cómo organizar y procesar grandes volúmenes de información para extraer valor?",
+          text: "Transformo percepciones en KPIs claros, seguimiento y decisiones medibles.",
         },
         { selector: ".projects .section-label", text: "Proyectos" },
         {
@@ -363,20 +363,20 @@ document.addEventListener("DOMContentLoaded", () => {
         { selector: ".skill-group:nth-child(3) li:nth-child(3)", text: "Organización de datos para análisis" },
         { selector: ".skill-group:nth-child(3) li:nth-child(4)", text: "Escalabilidad y trazabilidad" },
         { selector: ".tech-group h3", text: "Tecnologías" },
-        { selector: ".cta-box .section-label", text: "Trabajemos juntos" },
+        { selector: ".cta-box .section-label", text: "Deja de decidir por intuición" },
         {
           selector: ".cta-box .section-title",
-          text: "¿Tienes datos que necesitan convertirse en una decisión clara?",
+          text: "Empieza a decidir con información clara.",
         },
         {
           selector: ".cta-text",
-          text: "Puedo ayudarte a ordenar fuentes, descubrir patrones, diseñar dashboards y comunicar hallazgos con una narrativa visual útil para equipos, investigación u organizaciones.",
+          text: "Puedo ayudarte a ordenar ventas, costos, menú y operación para encontrar oportunidades de rentabilidad y convertirlas en acciones concretas.",
         },
         {
           selector: ".cta-actions .button-primary",
-          text: "Escribirme ahora",
+          text: "Agendar diagnóstico",
           attrs: {
-            href: "mailto:santirib01@gmail.com?subject=Hola%20Santiago%2C%20quiero%20hablar%20sobre%20un%20proyecto%20de%20datos&body=Hola%20Santiago%2C%0A%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto%20de%20datos.%0A",
+            href: "mailto:santiago.rios.consultoria@outlook.com?subject=Hola%20Santiago%2C%20quiero%20hablar%20sobre%20un%20proyecto%20de%20datos&body=Hola%20Santiago%2C%0A%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto%20de%20datos.%0A",
           },
         },
         { selector: ".cta-actions .button-secondary", text: "Revisar casos" },
@@ -387,11 +387,13 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "Puedes escribirme para colaborar, conversar sobre proyectos o conocer más sobre mi trabajo.",
         },
         { selector: ".contact-info h3", text: "Información de contacto" },
+        { selector: ".contact-list-icons li:nth-child(1) img", attrs: { src: "media/Microsoft_Outlook-Logo.png", alt: "Microsoft Outlook" } },
+        { selector: ".contact-list-icons li:nth-child(1) span", text: "santiago.rios.consultoria@outlook.com" },
         {
           selector: ".contact-list-icons li:nth-child(1) a",
           attrs: {
             "aria-label": "Enviar correo a Santiago Ríos",
-            href: "mailto:santirib01@gmail.com?subject=Hola%20Santiago%2C%20vi%20tu%20portafolio&body=Hola%20Santiago%2C%0A%0ATe%20escribo%20porque%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo.%0A%0AQuedo%20atento.%0A",
+            href: "mailto:santiago.rios.consultoria@outlook.com?subject=Hola%20Santiago%2C%20vi%20tu%20portafolio&body=Hola%20Santiago%2C%0A%0ATe%20escribo%20porque%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo.%0A%0AQuedo%20atento.%0A",
           },
         },
         {
@@ -405,11 +407,11 @@ document.addEventListener("DOMContentLoaded", () => {
         { selector: ".contact-message h3", text: "Mensaje final" },
         {
           selector: ".contact-message p:nth-child(2)",
-          text: "Gracias por visitar mi portafolio. Este espacio está diseñado para mostrar cómo los datos pueden convertirse en historias claras, visuales y útiles.",
+          text: "Gracias por visitar mi página. Este espacio presenta cómo la analítica gastronómica puede convertir datos operativos en decisiones claras y rentables.",
         },
         {
           selector: ".contact-message p:nth-child(3)",
-          text: "Aquí encontrarás una selección de proyectos construidos con enfoque analítico, intención comunicativa y vocación por generar impacto.",
+          text: "Si tienes ventas, costos o procesos por ordenar, conversemos sobre un diagnóstico para tu negocio gastronómico.",
         },
         {
           selector: ".site-footer p",
@@ -777,7 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
           selector: ".cta-actions .button-primary",
           text: "Email me now",
           attrs: {
-            href: "mailto:santirib01@gmail.com?subject=Hi%20Santiago%2C%20I%20want%20to%20talk%20about%20a%20data%20project&body=Hi%20Santiago%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20data%20project.%0A",
+            href: "mailto:santiago.rios.consultoria@outlook.com?subject=Hi%20Santiago%2C%20I%20want%20to%20talk%20about%20a%20data%20project&body=Hi%20Santiago%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20data%20project.%0A",
           },
         },
         { selector: ".cta-actions .button-secondary", text: "Review cases" },
@@ -788,11 +790,13 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "You can write to me to collaborate, talk about projects, or learn more about my work.",
         },
         { selector: ".contact-info h3", text: "Contact information" },
+        { selector: ".contact-list-icons li:nth-child(1) img", attrs: { src: "media/Microsoft_Outlook-Logo.png", alt: "Microsoft Outlook" } },
+        { selector: ".contact-list-icons li:nth-child(1) span", text: "santiago.rios.consultoria@outlook.com" },
         {
           selector: ".contact-list-icons li:nth-child(1) a",
           attrs: {
             "aria-label": "Send an email to Santiago Ríos",
-            href: "mailto:santirib01@gmail.com?subject=Hi%20Santiago%2C%20I%20saw%20your%20portfolio&body=Hi%20Santiago%2C%0A%0AI%20am%20writing%20because%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.%0A",
+            href: "mailto:santiago.rios.consultoria@outlook.com?subject=Hi%20Santiago%2C%20I%20saw%20your%20portfolio&body=Hi%20Santiago%2C%0A%0AI%20am%20writing%20because%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.%0A",
           },
         },
         {
