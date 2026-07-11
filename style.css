@@ -2951,3 +2951,53 @@ body {
     min-height: 620px;
   }
 }
+
+/* ===== Ajustes finales: footer legible, timeline sin solapes y subtítulo bilingüe ===== */
+.site-footer {
+  background: linear-gradient(135deg, #082f4e, #16324f) !important;
+  color: #fffdf8 !important;
+}
+
+.footer-content p,
+.footer-links a {
+  color: rgba(255, 253, 248, 0.88) !important;
+  opacity: 1 !important;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #fffdf8 !important;
+}
+
+.logo-subtitle {
+  white-space: nowrap;
+}
+
+.professional-timeline svg {
+  min-height: 500px !important;
+}
+
+.timeline-year {
+  font-size: 0.78rem !important;
+}
+
+.timeline-category {
+  font-size: 0.58rem !important;
+  letter-spacing: 0.06em !important;
+}
+
+@media (min-width: 921px) {
+  .professional-timeline {
+    padding-inline: clamp(1.5rem, 3vw, 2.4rem);
+  }
+}
+
+@media (max-width: 920px) {
+  .professional-timeline svg {
+    min-height: 680px !important;
+  }
+
+  .timeline-category {
+    font-size: 0.62rem !important;
+  }
+}

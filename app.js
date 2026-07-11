@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items: [
         { selector: ".skip-link", text: "Saltar al contenido principal" },
         { selector: ".logo", attrs: { "aria-label": "Ir al inicio" } },
+        { selector: ".logo-subtitle", text: "Profesional en Inteligencia de Negocios Gastronómicos" },
         { selector: ".main-nav", attrs: { "aria-label": "Navegación principal" } },
         { selector: ".nav-menu li:nth-child(1) a", text: "Sobre mí" },
         { selector: ".nav-menu li:nth-child(2) a", text: "Trayectoria" },
@@ -450,6 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items: [
         { selector: ".skip-link", text: "Skip to main content" },
         { selector: ".logo", attrs: { "aria-label": "Go to home" } },
+        { selector: ".logo-subtitle", text: "Professional in Gastronomic Business Intelligence" },
         { selector: ".main-nav", attrs: { "aria-label": "Main navigation" } },
         { selector: ".nav-menu li:nth-child(1) a", text: "About" },
         { selector: ".nav-menu li:nth-child(2) a", text: "Experience" },
@@ -1016,7 +1018,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bounds = container.getBoundingClientRect();
     const width = Math.max(bounds.width || container.clientWidth || 320, 320);
     const isCompact = width < 720;
-    const height = isCompact ? 620 : 430;
+    const height = isCompact ? 680 : 520;
     const margin = isCompact
       ? { top: 36, right: 28, bottom: 96, left: 28 }
       : { top: 58, right: 64, bottom: 120, left: 64 };
@@ -1031,9 +1033,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("aria-label", lang === "es" ? "Línea de tiempo profesional interactiva" : "Interactive professional timeline");
 
     const x = d3.scaleLinear().domain([2014, 2026]).range([margin.left, width - margin.right]);
+    const desktopLanes = [72, 170, 268];
     const y = isCompact
       ? (_d, i) => margin.top + 34 + i * 58
-      : (_d, i) => margin.top + (i % 2 === 0 ? 86 : 190);
+      : (_d, i) => margin.top + desktopLanes[i % desktopLanes.length];
 
     const axisY = isCompact ? height - margin.bottom + 28 : height - margin.bottom;
 
@@ -1092,7 +1095,36 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("class", "timeline-category")
       .attr("y", 39)
       .attr("text-anchor", "middle")
-      .text((d) => d[lang].category || d.category);
+      .text((d) => d[lang].category || d.category)
+      .call((selection) => {
+        selection.each(function wrapTimelineLabel() {
+          const text = d3.select(this);
+          const words = text.text().split(/\s+/).filter(Boolean);
+          const maxChars = isCompact ? 16 : 18;
+          const lines = [];
+          let line = [];
+
+          words.forEach((word) => {
+            const candidate = [...line, word].join(" ");
+            if (candidate.length > maxChars && line.length) {
+              lines.push(line.join(" "));
+              line = [word];
+            } else {
+              line.push(word);
+            }
+          });
+
+          if (line.length) lines.push(line.join(" "));
+          text.text(null);
+          lines.slice(0, 2).forEach((labelLine, index) => {
+            text
+              .append("tspan")
+              .attr("x", 0)
+              .attr("dy", index === 0 ? 0 : 14)
+              .text(labelLine);
+          });
+        });
+      });
 
     const detail = document.createElement("div");
     detail.className = "timeline-detail";
