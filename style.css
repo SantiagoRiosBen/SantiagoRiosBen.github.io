@@ -2582,3 +2582,108 @@ body {
     font-size: clamp(1.85rem, 10vw, 2.55rem);
   }
 }
+
+/* ===== Corrección solicitada: hero más horizontal, textos legibles y franjas de marca ===== */
+.hero-cabezote {
+  min-height: clamp(500px, 60vh, 660px) !important;
+  padding: clamp(3.8rem, 6.5vw, 5.6rem) 0 !important;
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.98) 0%, rgba(255, 253, 248, 0.9) 54%, rgba(255, 253, 248, 0.5) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote .hero-content {
+  max-width: min(100%, 1080px) !important;
+}
+
+.hero-title,
+.hero-cabezote .hero-title {
+  max-width: 980px !important;
+  font-size: clamp(3rem, 5.25vw, 4.9rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.045em !important;
+  text-wrap: balance;
+}
+
+.hero-description,
+.hero-cabezote .hero-description {
+  max-width: 900px !important;
+}
+
+.hero-actions,
+.hero-highlights {
+  max-width: 980px !important;
+}
+
+/* Los encabezados de sección no deben quedar blancos sobre fondos claros. */
+.section-heading,
+.about .section-heading,
+.approach .section-heading,
+.questions .section-heading,
+.projects .section-heading,
+.process .section-heading,
+.skills .section-heading,
+.contact .section-heading {
+  background: transparent !important;
+  color: var(--primary) !important;
+}
+
+.section-heading .section-label,
+.about .section-heading .section-label,
+.resume .section-heading .section-label,
+.contact .section-heading .section-label {
+  color: var(--accent) !important;
+  text-shadow: none !important;
+}
+
+.section-heading .section-title,
+.about .section-heading .section-title,
+.resume .section-heading .section-title,
+.contact .section-heading .section-title {
+  color: var(--primary) !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+
+.section-heading .section-description,
+.resume .section-heading .section-description,
+.contact .section-heading .section-description {
+  color: var(--text-soft) !important;
+  text-shadow: none !important;
+}
+
+/* Reemplaza las franjas lavadas/grises por una franja sólida con colores de marca. */
+#enfoque.section::before,
+.questions.section::before,
+#proyectos.section::before,
+#proceso.section::before,
+#habilidades.section::before,
+.cta.section::before,
+#contacto.section::before {
+  height: 8px !important;
+  width: min(92%, var(--max-width)) !important;
+  margin: 0 auto clamp(2rem, 4vw, 3rem) !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 52%, var(--secondary) 100%) !important;
+  box-shadow: 0 12px 26px rgba(22, 50, 79, 0.12) !important;
+  backdrop-filter: none !important;
+}
+
+.hero-cabezote::after {
+  height: 8px !important;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary)) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    min-height: auto !important;
+    padding: 3.8rem 0 4.3rem !important;
+  }
+
+  .hero-title,
+  .hero-cabezote .hero-title {
+    max-width: 12ch !important;
+    font-size: clamp(2.65rem, 12vw, 4.2rem) !important;
+  }
+}
