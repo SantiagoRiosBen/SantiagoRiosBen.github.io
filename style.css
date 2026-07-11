@@ -1415,7 +1415,7 @@ button:focus-visible {
       rgba(10, 14, 20, 0.72) 42%,
       rgba(10, 14, 20, 0.62) 100%
     ),
-    url("media/Cabezote.jpg") center center / cover no-repeat;
+    url("media/Cabezote gris.png") center center / cover no-repeat;
 }
 
 .hero-cabezote .container,
@@ -1559,7 +1559,7 @@ button:focus-visible {
       rgba(10, 14, 20, 0.72) 45%,
       rgba(10, 14, 20, 0.76) 100%
     ),
-    url("media/Cabezote.jpg") center center / cover no-repeat;
+    url("media/Cabezote gris.png") center center / cover no-repeat;
 }
 
 .section-heading::after {
@@ -1748,10 +1748,10 @@ button:focus-visible {
   }
 }
 
-/* ===== Fondo de franjas de títulos con titulos.png, sin degradados ===== */
+/* ===== Fondo de franjas de títulos con Títulos azul.png, sin degradados ===== */
 
 .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
 }
 
 .section-heading::after {
@@ -1759,7 +1759,7 @@ button:focus-visible {
 }
 
 .about .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
 }
 
 /* ===== AJUSTE FINAL RECOMENDADO PARA FRANJAS Y TRANSICIÓN ===== */
@@ -1801,7 +1801,7 @@ button:focus-visible {
   overflow: hidden;
 }
 
-/* Fondo con titulos.png SIN degradado */
+/* Fondo con Títulos azul.png SIN degradado */
 .section-heading::before {
   content: "";
   position: absolute;
@@ -1810,7 +1810,7 @@ button:focus-visible {
   width: 100vw;
   transform: translateX(-50%);
   z-index: -1;
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
   filter: brightness(0.25) contrast(1.08);
 }
 
@@ -1904,7 +1904,7 @@ button:focus-visible {
 
 /* Si el fondo de títulos no está ocupando bien la franja */
 .section-heading::before {
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
   filter: brightness(0.23) contrast(1.08);
 }
 
@@ -2119,7 +2119,7 @@ body {
   min-height: calc(100vh - var(--header-height));
   background:
     linear-gradient(90deg, rgba(255, 253, 248, 0.97) 0%, rgba(255, 253, 248, 0.88) 48%, rgba(255, 253, 248, 0.45) 100%),
-    url("media/Cabezote.jpg") center center / cover no-repeat !important;
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
 }
 
 .hero-cabezote::after {
@@ -2219,7 +2219,7 @@ body {
 .section-heading .section-title {
   display: inline;
   padding: 0.2rem 0.55rem;
-  background: url("media/titulos.png") center center / cover no-repeat !important;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
   color: #fffdf8;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -2229,7 +2229,7 @@ body {
 .cta-box {
   background:
     linear-gradient(90deg, rgba(8, 47, 78, 0.96), rgba(22, 50, 79, 0.88)),
-    url("media/titulos.png") center center / cover no-repeat;
+    url("media/Títulos azul.png") center center / cover no-repeat;
   border: 1px solid rgba(255, 253, 248, 0.18);
 }
 
@@ -2253,8 +2253,70 @@ body {
   .hero-cabezote {
     background:
       linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(255, 253, 248, 0.86)),
-      url("media/Cabezote.jpg") center center / cover no-repeat !important;
+      url("media/Cabezote gris.png") center center / cover no-repeat !important;
   }
 
   .logo-subtitle { max-width: 240px; }
+}
+
+
+/* ===== Ajuste final: limpiar fondos heredados y usar activos nuevos ===== */
+.hero-cabezote {
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.98) 0%, rgba(255, 253, 248, 0.88) 46%, rgba(255, 253, 248, 0.36) 100%),
+    url("media/Cabezote gris.png") center center / cover no-repeat !important;
+}
+
+.hero-cabezote::before,
+.section-heading::before,
+.section-heading::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.section-heading {
+  isolation: auto !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.section-heading .section-title {
+  display: inline;
+  padding: 0.22rem 0.6rem;
+  background: url("media/Títulos azul.png") center center / cover no-repeat !important;
+  color: #fffdf8 !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-photo img {
+  content: url("media/Santiago Rios B (2).png");
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cta-box {
+  background:
+    linear-gradient(90deg, rgba(8, 47, 78, 0.94), rgba(22, 50, 79, 0.86)),
+    url("media/Títulos azul.png") center center / cover no-repeat !important;
+}
+
+.contact-icon[alt="Microsoft Outlook"] {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+@media (max-width: 920px) {
+  .hero-cabezote {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.97), rgba(255, 253, 248, 0.86)),
+      url("media/Cabezote gris.png") center center / cover no-repeat !important;
+  }
 }
