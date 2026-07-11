@@ -3001,3 +3001,179 @@ body {
     font-size: 0.62rem !important;
   }
 }
+
+/* ===== Corrección mobile/tablet y chips del hero ===== */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-highlights {
+  align-items: flex-start !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.hero-highlights li {
+  margin-left: 0 !important;
+  padding: 0.52rem 1rem 0.52rem 1.85rem !important;
+}
+
+.hero-highlights li::before {
+  left: 0.78rem !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.contact-link,
+.footer-content,
+.contact-list-icons li {
+  min-width: 0;
+}
+
+.contact-link span,
+.footer-content p,
+.footer-links a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1180px) {
+  .header-content {
+    gap: 0.85rem;
+  }
+
+  .nav-menu {
+    gap: 0.9rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .site-header .container,
+  .container {
+    width: min(92%, 100% - 1.25rem);
+  }
+
+  .header-content {
+    gap: 0.65rem;
+  }
+
+  .logo {
+    min-width: 0;
+    max-width: calc(100vw - 12.5rem);
+  }
+
+  .logo-text {
+    font-size: clamp(1.05rem, 5vw, 1.45rem) !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .logo-subtitle {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.62rem !important;
+  }
+
+  .language-toggle {
+    padding: 0.72rem 0.78rem;
+  }
+
+  .hero-cabezote {
+    width: 100%;
+    background-position: 58% center !important;
+  }
+
+  .hero-cabezote .hero-content,
+  .hero-title,
+  .hero-cabezote .hero-title,
+  .hero-description,
+  .hero-cabezote .hero-description,
+  .hero-actions,
+  .hero-highlights {
+    max-width: 100% !important;
+  }
+
+  .hero-title,
+  .hero-cabezote .hero-title {
+    font-size: clamp(2.45rem, 13vw, 4rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .hero-description,
+  .hero-cabezote .hero-description {
+    font-size: 1.03rem !important;
+  }
+
+  .professional-timeline svg {
+    min-height: 860px !important;
+  }
+
+  .timeline-year {
+    font-size: 0.74rem !important;
+  }
+
+  .timeline-category {
+    font-size: 0.56rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header .container,
+  .container {
+    width: min(92%, 100% - 1rem);
+  }
+
+  .logo {
+    max-width: calc(100vw - 10.8rem);
+  }
+
+  .nav-toggle {
+    padding-inline: 0.78rem;
+  }
+
+  .language-toggle {
+    min-height: 44px;
+    padding: 0.62rem 0.68rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-cabezote {
+    padding-top: 3.2rem !important;
+  }
+
+  .hero-eyebrow,
+  .hero-cabezote .hero-eyebrow {
+    width: 100%;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-highlights li {
+    width: 100% !important;
+    font-size: 0.94rem !important;
+  }
+
+  .timeline-card {
+    padding: 0.8rem;
+  }
+
+  .professional-timeline {
+    padding: 0.65rem !important;
+  }
+
+  .timeline-detail {
+    padding: 0.9rem !important;
+  }
+}

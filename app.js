@@ -1018,7 +1018,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bounds = container.getBoundingClientRect();
     const width = Math.max(bounds.width || container.clientWidth || 320, 320);
     const isCompact = width < 720;
-    const height = isCompact ? 680 : 520;
+    const height = isCompact ? 860 : 520;
     const margin = isCompact
       ? { top: 36, right: 28, bottom: 96, left: 28 }
       : { top: 58, right: 64, bottom: 120, left: 64 };
@@ -1035,8 +1035,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const x = d3.scaleLinear().domain([2014, 2026]).range([margin.left, width - margin.right]);
     const desktopLanes = [72, 170, 268];
     const y = isCompact
-      ? (_d, i) => margin.top + 34 + i * 58
+      ? (_d, i) => margin.top + 58 + i * 82
       : (_d, i) => margin.top + desktopLanes[i % desktopLanes.length];
+    const nodeX = (d, i) => isCompact ? width / 2 : x((d.start + d.end) / 2);
 
     const axisY = isCompact ? height - margin.bottom + 28 : height - margin.bottom;
 
@@ -1070,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("tabindex", 0)
       .attr("role", "button")
       .attr("aria-label", (d) => `${d.year}. ${d[lang].title}. ${d[lang].description}`)
-      .attr("transform", (d, i) => `translate(${x((d.start + d.end) / 2)},${y(d, i)})`);
+      .attr("transform", (d, i) => `translate(${nodeX(d, i)},${y(d, i)})`);
 
     nodes
       .append("line")
