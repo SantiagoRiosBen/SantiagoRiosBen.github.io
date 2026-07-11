@@ -3177,3 +3177,29 @@ body {
     padding: 0.9rem !important;
   }
 }
+
+/* ===== Timeline móvil: eje vertical real en orientación portrait ===== */
+@media (max-width: 720px) and (orientation: portrait) {
+  .professional-timeline svg {
+    min-height: 920px !important;
+  }
+
+  .timeline-ticks text {
+    font-size: 0.72rem !important;
+  }
+
+  .timeline-node .timeline-year {
+    font-size: 0.76rem !important;
+  }
+
+  .timeline-node .timeline-category {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.05em !important;
+  }
+}
+
+@media (min-width: 721px), (orientation: landscape) {
+  .professional-timeline svg {
+    min-height: 500px !important;
+  }
+}

@@ -1018,9 +1018,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const bounds = container.getBoundingClientRect();
     const width = Math.max(bounds.width || container.clientWidth || 320, 320);
     const isCompact = width < 720;
-    const height = isCompact ? 860 : 520;
+    const height = isCompact ? 920 : 520;
     const margin = isCompact
-      ? { top: 36, right: 28, bottom: 96, left: 28 }
+      ? { top: 48, right: 24, bottom: 48, left: 52 }
       : { top: 58, right: 64, bottom: 120, left: 64 };
 
     container.innerHTML = "";
@@ -1033,21 +1033,23 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("aria-label", lang === "es" ? "Línea de tiempo profesional interactiva" : "Interactive professional timeline");
 
     const x = d3.scaleLinear().domain([2014, 2026]).range([margin.left, width - margin.right]);
+    const yScale = d3.scaleLinear().domain([2014, 2026]).range([margin.top, height - margin.bottom]);
     const desktopLanes = [72, 170, 268];
     const y = isCompact
-      ? (_d, i) => margin.top + 58 + i * 82
+      ? (_d, i) => margin.top + 72 + i * 92
       : (_d, i) => margin.top + desktopLanes[i % desktopLanes.length];
-    const nodeX = (d, i) => isCompact ? width / 2 : x((d.start + d.end) / 2);
+    const nodeX = (d, i) => isCompact ? Math.min(width - margin.right - 72, Math.max(margin.left + 138, width * 0.58)) : x((d.start + d.end) / 2);
 
-    const axisY = isCompact ? height - margin.bottom + 28 : height - margin.bottom;
+    const axisY = height - margin.bottom;
+    const axisX = isCompact ? margin.left + 32 : null;
 
     svg
       .append("line")
       .attr("class", "timeline-axis")
-      .attr("x1", margin.left)
-      .attr("x2", width - margin.right)
-      .attr("y1", axisY)
-      .attr("y2", axisY);
+      .attr("x1", isCompact ? axisX : margin.left)
+      .attr("x2", isCompact ? axisX : width - margin.right)
+      .attr("y1", isCompact ? margin.top : axisY)
+      .attr("y2", isCompact ? height - margin.bottom : axisY);
 
     svg
       .append("g")
@@ -1055,10 +1057,16 @@ document.addEventListener("DOMContentLoaded", () => {
       .selectAll("g")
       .data(d3.range(2014, 2027, 2))
       .join("g")
-      .attr("transform", (d) => `translate(${x(d)},${axisY})`)
+      .attr("transform", (d) => isCompact ? `translate(${axisX},${yScale(d)})` : `translate(${x(d)},${axisY})`)
       .call((g) => {
-        g.append("line").attr("y2", 10);
-        g.append("text").attr("y", 30).attr("text-anchor", "middle").text((d) => d);
+        g.append("line")
+          .attr("x2", isCompact ? 10 : 0)
+          .attr("y2", isCompact ? 0 : 10);
+        g.append("text")
+          .attr("x", isCompact ? -10 : 0)
+          .attr("y", isCompact ? 4 : 30)
+          .attr("text-anchor", isCompact ? "end" : "middle")
+          .text((d) => d);
       });
 
     const nodes = svg
@@ -1076,8 +1084,10 @@ document.addEventListener("DOMContentLoaded", () => {
     nodes
       .append("line")
       .attr("class", "timeline-connector")
-      .attr("y1", 15)
-      .attr("y2", (_d, i) => axisY - y(_d, i) - 8);
+      .attr("x1", isCompact ? (axisX - nodeX(null, 0) + 10) : 0)
+      .attr("x2", isCompact ? -15 : 0)
+      .attr("y1", isCompact ? 0 : 15)
+      .attr("y2", (d, i) => isCompact ? 0 : axisY - y(d, i) - 8);
 
     nodes
       .append("circle")
